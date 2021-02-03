@@ -32,7 +32,10 @@
       </v-card>
       <v-card>
         Visas:
-        <au-pair :user-details="userDetails"></au-pair>
+        <au-pair
+          v-if="userDetails.age > 18 && userDetails.age < 26"
+          :user-details="userDetails"
+        />
         <l1-visa :user-details="userDetails" />
         <marriage
           v-if="!userDetails.martialStatus"
