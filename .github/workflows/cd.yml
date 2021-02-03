@@ -4,6 +4,11 @@ on: [push, pull_request]
 
 jobs:
   cd:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
     runs-on: ${{ matrix.os }}
 
     steps:
