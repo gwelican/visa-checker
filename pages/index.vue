@@ -1,41 +1,50 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-
       <v-card>
         <v-row>
           <v-col>
             {{ userDetails }}
           </v-col>
         </v-row>
-
       </v-card>
       <v-card>
         <v-row>
           <v-col>
-            <v-text-field label="Eletkor" v-model="userDetails.age"></v-text-field>
+            <v-text-field
+              v-model="userDetails.age"
+              label="Eletkor"
+            ></v-text-field>
           </v-col>
           <v-col>
-            <v-checkbox :label="`Hazas`" v-model="userDetails.martialStatus"></v-checkbox>
+            <v-checkbox
+              v-model="userDetails.martialStatus"
+              :label="`Hazas`"
+            ></v-checkbox>
           </v-col>
           <v-col>
-            <v-checkbox :label="`Van $900.000-om befektetni`" v-model="userDetails.eb5money"/>
+            <v-checkbox
+              v-model="userDetails.eb5money"
+              :label="`Van $900.000-om befektetni`"
+            />
           </v-col>
         </v-row>
-
       </v-card>
       <v-card>
         Visas:
         <au-pair :user-details="userDetails"></au-pair>
-        <l1-visa :user-details="userDetails"/>
-        <marriage :user-details="userDetails" v-if="!userDetails.martialStatus"/>
-        <eb5-visa :user-details="userDetails" v-if="userDetails.eb5money"/>
-        <eb1-visa :user-details="userDetails"/>
-        <eb2-visa :user-details="userDetails"/>
-        <eb3-visa :user-details="userDetails"/>
-        <o1-visa :user-details="userDetails"/>
-        <h1-visa :user-details="userDetails"/>
-        <f1-visa :user-details="userDetails"/>
+        <l1-visa :user-details="userDetails" />
+        <marriage
+          v-if="!userDetails.martialStatus"
+          :user-details="userDetails"
+        />
+        <eb5-visa v-if="userDetails.eb5money" :user-details="userDetails" />
+        <eb1-visa :user-details="userDetails" />
+        <eb2-visa :user-details="userDetails" />
+        <eb3-visa :user-details="userDetails" />
+        <o1-visa :user-details="userDetails" />
+        <h1-visa :user-details="userDetails" />
+        <f1-visa :user-details="userDetails" />
       </v-card>
       <!--      <v-card>-->
       <!--        <v-card-title class="headline">-->
@@ -111,28 +120,39 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from "nuxt-property-decorator"
-import AuPair from "~/pages/AuPair.vue";
-import L1Visa from "~/pages/L1.vue";
-import Marriage from "~/pages/Marriage.vue";
-import Eb5Visa from "~/pages/Eb5.vue";
-import Eb1Visa from "~/pages/Eb1.vue";
-import Eb2Visa from "~/pages/Eb2.vue";
-import Eb3Visa from "~/pages/Eb3.vue";
-import O1Visa from "~/pages/O1.vue";
-import H1Visa from "~/pages/h1.vue";
-import F1Visa from "~/pages/f1.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import AuPair from '~/pages/AuPair.vue'
+import L1Visa from '~/pages/L1.vue'
+import Marriage from '~/pages/Marriage.vue'
+import Eb5Visa from '~/pages/Eb5.vue'
+import Eb1Visa from '~/pages/Eb1.vue'
+import Eb2Visa from '~/pages/Eb2.vue'
+import Eb3Visa from '~/pages/Eb3.vue'
+import O1Visa from '~/pages/O1.vue'
+import H1Visa from '~/pages/h1.vue'
+import F1Visa from '~/pages/f1.vue'
 
 export class UserDetails {
-  age = 18;
-  martialStatus = false;
-  eb5money = false;
+  age = 18
+  martialStatus = false
+  eb5money = false
 }
 
 @Component({
-  components: {F1Visa, H1Visa, O1Visa, Eb3Visa, Eb2Visa, Eb1Visa, Eb5Visa, Marriage, L1Visa, AuPair}
+  components: {
+    F1Visa,
+    H1Visa,
+    O1Visa,
+    Eb3Visa,
+    Eb2Visa,
+    Eb1Visa,
+    Eb5Visa,
+    Marriage,
+    L1Visa,
+    AuPair,
+  },
 })
 export default class Index extends Vue {
-  userDetails: UserDetails = new UserDetails();
+  userDetails: UserDetails = new UserDetails()
 }
 </script>
