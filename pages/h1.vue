@@ -15,7 +15,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { UserDetails } from '~/pages/index.vue'
 
 @Component
-export default class h1 extends Vue {
+export default class h1visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 }
