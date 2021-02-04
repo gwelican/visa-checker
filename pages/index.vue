@@ -2,9 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <v-card>
-          <v-card-title class="justify-center">J1(au pair)</v-card-title>
-        </v-card>
+        <au-pair />
       </v-col>
       <v-col>
         <v-card>
