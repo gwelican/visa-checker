@@ -9,7 +9,7 @@
 </template>
 <script lang="ts">
 import { Prop, Component, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
+import { UserDetails } from '~/pages/my-visas.vue'
 import Requirements from '~/components/Requirements.vue'
 
 @Component({

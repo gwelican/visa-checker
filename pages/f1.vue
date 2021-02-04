@@ -12,7 +12,7 @@
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
+import { UserDetails } from '~/pages/my-visas.vue'
 
 @Component
 export default class f1 extends Vue {
