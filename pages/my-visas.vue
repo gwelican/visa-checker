@@ -213,11 +213,13 @@ import L1Visa from '~/pages/L1.vue'
 import Marriage from '~/pages/marriage.vue'
 import Eb5Visa from '~/pages/Eb5.vue'
 import Eb1Visa from '~/pages/Eb1.vue'
-import Eb2Visa from '~/pages/Eb2.vue'
 import Eb3Visa from '~/pages/Eb3.vue'
 import O1Visa from '~/pages/o1.vue'
 import H1Visa from '~/pages/h1.vue'
 import F1Visa from '~/pages/f1.vue'
+import Eb2VisaAd from '~/pages/Eb2aAd.vue'
+import Eb2VisaEa from '~/pages/Eb2Ea.vue'
+import Eb2VisaNiw from '~/pages/Eb2Niw.vue'
 
 export class UserDetails {
   age = 18
@@ -232,12 +234,14 @@ export class UserDetails {
     H1Visa,
     O1Visa,
     Eb3Visa,
-    Eb2Visa,
     Eb1Visa,
     Eb5Visa,
     Marriage,
     L1Visa,
     AuPair,
+    Eb2VisaAd,
+    Eb2VisaEa,
+    Eb2VisaNiw,
   },
 })
 export default class Index extends Vue {
