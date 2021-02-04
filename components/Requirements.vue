@@ -1,12 +1,20 @@
 <template>
-  <v-list>
-    <v-list-item v-for="requirement in requirements" :key="requirement">
-      <v-list-item-icon>
-        <v-icon>mdi-square-small</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>{{ requirement }}</v-list-item-content>
-    </v-list-item>
-  </v-list>
+  <v-dialog v-model="dialog">
+    <template #activator="{ on, attrs }">
+      <v-btn v-on="on">Kovetelmenyek</v-btn>
+    </template>
+    <v-card-text>
+      Kovetelmenyek:
+      <v-list>
+        <v-list-item v-for="requirement in requirements" :key="requirement">
+          <v-list-item-icon>
+            <v-icon>mdi-square-small</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>{{ requirement }}</v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-card-text>
+  </v-dialog>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'

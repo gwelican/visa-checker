@@ -2,7 +2,6 @@
   <v-card>
     <v-card-title>J1</v-card-title>
     <v-card-text>
-      Kovetelmenyek:
       <requirements :requirements="requirements" />
     </v-card-text>
   </v-card>
