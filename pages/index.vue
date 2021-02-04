@@ -17,6 +17,9 @@
         </v-card>
       </v-col>
       <v-col>
+        <eb2-visa-ad></eb2-visa-ad>
+        <eb2-visa-ea></eb2-visa-ea>
+        <eb2-visa-niw></eb2-visa-niw>
         <v-card>
           <v-card-title class="justify-center">EB2</v-card-title>
         </v-card>
