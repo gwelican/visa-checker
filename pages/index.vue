@@ -52,7 +52,7 @@
                       <v-icon>mdi-help-circle</v-icon>
                     </v-btn>
                   </template>
-                  <span>hi</span>
+                  <span>This is a tooltip</span>
                 </v-tooltip>
               </v-row>
             </v-col>
