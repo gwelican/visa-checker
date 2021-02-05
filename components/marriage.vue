@@ -7,18 +7,18 @@
   </v-card>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
+  import { Component, Prop, Vue } from 'nuxt-property-decorator'
+  import { UserDetails } from '~/pages/index.vue'
 
-@Component
-export default class Marriage extends Vue {
+  @Component
+  export default class Marriage extends Vue {
   @Prop()
   userDetails!: UserDetails
 
   private requirements = []
 
   get enabled() {
-    return !this.userDetails.martialStatus ? 'colorActive' : 'colorInactive'
+  return !this.userDetails.martialStatus &&  !this.userDetails.selfpetition ? 'colorActive' : 'colorInactive'
   }
-}
+  }
 </script>

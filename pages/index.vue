@@ -3,7 +3,7 @@
     <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="9">
         <v-card flat>
-          <v-card-title> Szemelyes adatok </v-card-title>
+          <v-card-title> Személyes adatok </v-card-title>
           <v-card-text>
             <v-row justify="space-between">
               <v-col cols="3">
@@ -15,7 +15,7 @@
               <v-col cols="3">
                 <v-checkbox
                   v-model="userDetails.martialStatus"
-                  :label="`Hazas vagyok`"
+                  :label="`Házas vagyok`"
                 ></v-checkbox>
               </v-col>
               <v-col cols="3">
@@ -24,7 +24,7 @@
               <v-col cols="3">
                 <v-checkbox
                   v-model="userDetails.bsc"
-                  label="Van bsc/foiskolai vegzettseg"
+                  label="Van BSc/főiskolai végzettség"
                 />
               </v-col>
             </v-row>
@@ -42,7 +42,7 @@
               <v-col cols="3">
                 <v-checkbox
                   v-model="userDetails.experienceOfTwoYears"
-                  label="Legalabb 2 ev szakmai gyakorlat"
+                  label="Legalább 2 év szakmai gyakorlat"
                 />
               </v-col>
               <v-col cols="3">
@@ -73,7 +73,7 @@
                   <v-col>
                     <v-checkbox
                       v-model="userDetails.professor"
-                      label="Kutato/professzor"
+                      label="Kutató/professzor"
                     />
                   </v-col>
                   <v-col>
@@ -99,7 +99,7 @@
               <v-col>
                 <v-checkbox
                   v-model="userDetails.selfpetition"
-                  label="Saját jogon adom be (SelfPetition)"
+                  label="Saját jogon adom be (SelfPetition) / Nem kell amerikai munkáltató hozzá"
                 />
               </v-col>
             </v-row>

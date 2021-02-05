@@ -23,7 +23,7 @@ export default class EB3VisaSkilled extends Vue {
   ]
 
   get enabled() {
-    return this.userDetails.bsc && this.userDetails.experienceOfTwoYears
+    return  this.userDetails.experienceOfTwoYears
       ? 'colorActive'
       : 'colorInactive'
   }

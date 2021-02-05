@@ -21,7 +21,9 @@
   ]
 
   get enabled() {
-  return 'colorActive'
+  return !this.userDetails.selfpetition
+  ? 'colorActive'
+  : 'colorInactive'
   }
   }
 </script>
