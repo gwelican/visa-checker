@@ -14,7 +14,7 @@ import Requirements from '~/components/Requirements.vue'
 @Component({
   components: { Requirements },
 })
-export default class AuPair extends Vue {
+export default class J1 extends Vue {
   @Prop()
   userDetails!: UserDetails
 

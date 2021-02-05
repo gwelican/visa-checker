@@ -1,8 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>
-      Employment-Based Immigration: Second Preference: EA
-    </v-card-title>
+    <v-card-title> EB2: EA </v-card-title>
     <v-card-text>
       <v-card-text>
         <requirements :requirements="requirements"></requirements>

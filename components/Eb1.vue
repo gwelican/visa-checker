@@ -1,8 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>
-      Employment-Based Immigration: Second Preference: NIW
-    </v-card-title>
+    <v-card-title>EB1</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>
@@ -13,7 +11,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { UserDetails } from '~/pages/my-visas.vue'
 
 @Component
-export default class Eb2Niw extends Vue {
+export default class Eb1 extends Vue {
   @Prop()
   userDetails!: UserDetails
 

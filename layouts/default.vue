@@ -36,13 +36,8 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Vizum test',
+          title: 'Vizum',
           to: '/my-visas',
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'Minden vizum',
-          to: '/',
         },
         {
           icon: 'mdi-chart-bubble',

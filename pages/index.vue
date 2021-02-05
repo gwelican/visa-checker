@@ -62,18 +62,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import AuPair from '~/pages/AuPair.vue'
-import L1Visa from '~/pages/L1.vue'
-import Marriage from '~/pages/marriage.vue'
-import Eb5Visa from '~/pages/Eb5.vue'
-import Eb1Visa from '~/pages/Eb1.vue'
-import Eb2VisaAd from '~/pages/Eb2aAd.vue'
-import Eb2VisaEa from '~/pages/Eb2Ea.vue'
-import Eb2VisaNiw from '~/pages/Eb2Niw.vue'
-import Eb3Visa from '~/pages/Eb3.vue'
-import O1Visa from '~/pages/o1.vue'
-import H1Visa from '~/pages/h1.vue'
-import F1Visa from '~/pages/f1.vue'
+import J1 from '~/components/J1.vue'
+import L1Visa from '~/components/L1.vue'
+import Marriage from '~/components/marriage.vue'
+import Eb5Visa from '~/components/Eb5.vue'
+import Eb1Visa from '~/components/Eb1.vue'
+import Eb2VisaAd from '~/components/Eb2aAd.vue'
+import Eb2VisaEa from '~/components/Eb2Ea.vue'
+import Eb2VisaNiw from '~/components/Eb2Niw.vue'
+import Eb3Visa from '~/components/Eb3.vue'
+import O1Visa from '~/components/o1.vue'
+import H1Visa from '~/components/h1.vue'
+import F1Visa from '~/components/f1.vue'
 
 @Component({
   components: {
@@ -88,7 +88,7 @@ import F1Visa from '~/pages/f1.vue'
     Eb5Visa,
     Marriage,
     L1Visa,
-    AuPair,
+    AuPair: J1,
   },
 })
 export default class Index extends Vue {}
