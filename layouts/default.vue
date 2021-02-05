@@ -37,7 +37,7 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Vizum',
-          to: '/my-visas',
+          to: '/',
         },
         {
           icon: 'mdi-chart-bubble',
