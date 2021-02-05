@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :color="enabled">
     <v-card-title class="justify-center"> EB2: Nemzeti Érdek </v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
@@ -18,21 +18,19 @@ export default class EB2Niw extends Vue {
   private requirements = [
     'Minimum MSc VAGY PhD végzettség',
     '5 év munkatapasztalat végzettségnek megfelelő területen',
-    '',
     'VAGY',
-    '',
     'Kivételes képesség:',
     '- tudományokban',
     '- művészetekben',
     '- üzleti életben',
     'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" ',
     'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:',
-    '',
     'PLUSZ',
-    '',
     'Bizonyítékok arra vonatkozólag, hogy állami érdek a jelölt beengedése még munkaajánlat nélkül is',
-    '',
-    '',
   ]
+
+  get enabled() {
+    return this.userDetails.msc ? 'colorActive' : 'colorInactive'
+  }
 }
 </script>

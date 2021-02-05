@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :color="enabled">
     <v-card-title class="justify-center">
       EB2: Minimum MSc végzettség
     </v-card-title>
@@ -21,7 +21,10 @@ export default class EB2Ad extends Vue {
     'Minimum MSc VAGY PhD végzettség',
     '5 év munkatapasztalat végzettségnek megfelelő területen',
     'Munkaajánlat szükséges USA cégtől',
-    '',
   ]
+
+  get enabled() {
+    return this.userDetails.msc ? 'colorActive' : 'colorInactive'
+  }
 }
 </script>

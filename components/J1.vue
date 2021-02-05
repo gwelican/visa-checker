@@ -1,7 +1,5 @@
 <template>
-  <v-card
-    :color="userDetails.age >= 18 && userDetails.age < 26 ? 'green' : 'red'"
-  >
+  <v-card :color="enabled">
     <v-card-title class="justify-center">J1</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements" />
@@ -30,5 +28,11 @@ export default class J1Visa extends Vue {
     'Max 2 év után 2 évre induló országba vissza kell térni',
     'Visszatérés alól különös indokkal felmentés kérhető ',
   ]
+
+  get enabled() {
+    return this.userDetails >= 18 && this.userDetails <= 26
+      ? 'colorInactive'
+      : 'colorActive'
+  }
 }
 </script>

@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar dense app>
       <v-tabs center-active centered>
-        <v-tab v-for="item in items" :key="item" :to="item.to">
+        <v-tab v-for="item in items" :key="item.to" :to="item.to">
           <v-card>
             <v-card-title>
               <!--              <v-icon>{{ item.icon }}</v-icon>-->

@@ -1,6 +1,6 @@
 <template>
   <v-card :color="enabled">
-    <v-card-title class="justify-center">EB5 </v-card-title>
+    <v-card-title class="justify-center">EB3: diplomás munkaerő</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>
@@ -11,14 +11,14 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { UserDetails } from '~/pages/index.vue'
 
 @Component
-export default class EB5Visa extends Vue {
+export default class EB3VisaProfessional extends Vue {
   @Prop()
   userDetails!: UserDetails
 
   private requirements = []
 
   get enabled() {
-    return this.userDetails.eb5money ? 'colorActive' : 'colorInactive'
+    return this.userDetails.bsc ? 'colorActive' : 'colorInactive'
   }
 }
 </script>

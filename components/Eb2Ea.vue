@@ -1,10 +1,10 @@
 <template>
-  <v-card>
+  <v-card :color="enabled">
     <v-card-title class="justify-center">
       EB2: Kivételes képességek
     </v-card-title>
     <v-card-text>
-      <requirements :requirements="requirements"></requirements>
+      <requirements :requirements="requirements" :links="links"></requirements>
     </v-card-text>
   </v-card>
 </template>
@@ -27,5 +27,19 @@ export default class EB2Ea extends Vue {
     'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:',
     'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2',
   ]
+
+  private links = [
+    {
+      text: 'uscis',
+      href:
+        'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2',
+    },
+  ]
+
+  get enabled() {
+    return this.userDetails.extraordinaryAbility
+      ? 'colorActive'
+      : 'colorInactive'
+  }
 }
 </script>

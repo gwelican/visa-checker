@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-card-title class="justify-center">O-1</v-card-title>
+  <v-card :color="enabled">
+    <v-card-title class="justify-center">O1 Kivételes képességek</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements" />
     </v-card-text>
@@ -16,5 +16,11 @@ export default class O1Visa extends Vue {
   userDetails!: UserDetails
 
   private requirements = []
+
+  get enabled() {
+    return this.userDetails.extraordinaryAbility
+      ? 'colorActive'
+      : 'colorInactive'
+  }
 }
 </script>

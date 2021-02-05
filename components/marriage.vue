@@ -1,5 +1,5 @@
 <template>
-  <v-card :color="userDetails.martialStatus ? 'red' : 'green'">
+  <v-card :color="enabled">
     <v-card-title class="justify-center">Hazassag</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements" />
@@ -16,5 +16,9 @@ export default class Marriage extends Vue {
   userDetails!: UserDetails
 
   private requirements = []
+
+  get enabled() {
+    return !this.userDetails.martialStatus ? 'colorActive' : 'colorInactive'
+  }
 }
 </script>

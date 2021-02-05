@@ -1,62 +1,102 @@
 <template>
   <v-container>
     <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
-        <v-card>
-          <v-row>
-            <v-col>
-              {{ userDetails }}
-            </v-col>
-          </v-row>
+      <v-col cols="12" sm="8" md="9">
+        <v-card flat>
+          <v-card-title> Szemelyes adatok </v-card-title>
+          <v-card-text>
+            <v-row justify="space-between">
+              <v-col cols="3">
+                <v-text-field
+                  v-model="userDetails.age"
+                  label="Eletkor"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="3">
+                <v-checkbox
+                  v-model="userDetails.martialStatus"
+                  :label="`Hazas vagyok`"
+                ></v-checkbox>
+              </v-col>
+              <v-col cols="3">
+                <v-checkbox v-model="userDetails.msc" label="Van msc/phd" />
+              </v-col>
+              <v-col cols="3">
+                <v-checkbox
+                  v-model="userDetails.bsc"
+                  label="Van bsc/foiskolai vegzettseg"
+                />
+              </v-col>
+            </v-row>
+          </v-card-text>
         </v-card>
         <v-card>
-          <v-row>
-            <v-col>
-              <v-text-field
-                v-model="userDetails.age"
-                label="Eletkor"
-              ></v-text-field>
-            </v-col>
-            <v-col>
-              <v-checkbox
-                v-model="userDetails.martialStatus"
-                :label="`Hazas vagyok`"
-              ></v-checkbox>
-            </v-col>
-            <v-col>
-              <v-checkbox
-                v-model="userDetails.eb5money"
-                :label="`Van $900.000-om befektetni`"
-              />
-            </v-col>
-            <v-col>
-              <v-checkbox v-model="userDetails.msc" :label="`Van msc/phd`" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <v-checkbox
-                v-model="userDetails.msc"
-                :label="`Rendkivuli kepesseg`"
-              />
-            </v-col>
-            <v-col>
-              <v-row>
+          <v-card-text>
+            <v-row>
+              <v-col cols="3">
                 <v-checkbox
-                  v-model="userDetails.msc"
-                  :label="`Kutato, professzor`"
+                  v-model="userDetails.eb5money"
+                  label="Befektetek $900.000-t"
                 />
-                <v-tooltip slot="prepend" top>
-                  <template #activator="{ on, attrs }">
-                    <v-btn icon v-bind="attrs" v-on="on">
-                      <v-icon>mdi-help-circle</v-icon>
-                    </v-btn>
-                  </template>
-                  <span>This is a tooltip</span>
-                </v-tooltip>
-              </v-row>
-            </v-col>
-          </v-row>
+              </v-col>
+              <v-col cols="3">
+                <v-checkbox
+                  v-model="userDetails.experienceOfTwoYears"
+                  label="Legalabb 2 ev szakmai gyakorlat"
+                />
+              </v-col>
+              <v-col cols="3">
+                <v-row align="center" no-gutters>
+                  <v-checkbox
+                    v-model="userDetails.extraordinaryAbility"
+                    label="Rendkivuli kepesseg"
+                  />
+                  <v-tooltip top close-delay="2000">
+                    <template #activator="{ on, attrs }">
+                      <v-btn icon v-bind="attrs" v-on="on">
+                        <v-icon dense>mdi-help-circle</v-icon>
+                      </v-btn>
+                    </template>
+                    <span>
+                      <a
+                        href="https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1"
+                        target="_blank"
+                        >USCIS</a
+                      >
+                    </span>
+                  </v-tooltip>
+                </v-row>
+              </v-col>
+              <v-col cols="3">
+                <v-row align="center" no-gutters>
+                  <v-col>
+                    <v-checkbox
+                      v-model="userDetails.professor"
+                      label="Kutato/professzor"
+                    />
+                  </v-col>
+                  <v-col>
+                    <v-tooltip top>
+                      <template #activator="{ on, attrs }">
+                        <v-btn icon v-bind="attrs" v-on="on">
+                          <v-icon dense>mdi-help-circle</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>This is a tooltip</span>
+                    </v-tooltip>
+                  </v-col>
+                </v-row>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-checkbox
+                  v-model="userDetails.manager"
+                  label="Nemzetkozi cegvezeto"
+                />
+              </v-col>
+            </v-row>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -64,12 +104,22 @@
       <v-col>
         <j1-visa :user-details="userDetails" />
       </v-col>
+
+      <v-col>
+        <eb1-visa-extra-ordinary :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb1-visa-manager :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb1-visa-outstanding :user-details="userDetails" />
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col>
         <l1-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
-        <eb1-visa :user-details="userDetails" />
-      </v-col>
+
       <v-col>
         <eb2-visa-ea :user-details="userDetails" />
       </v-col>
@@ -77,28 +127,34 @@
         <eb2-visa-niw :user-details="userDetails" />
       </v-col>
       <v-col>
-        <v-card>
-          <eb2-visa-ad :user-details="userDetails" />
-        </v-card>
+        <eb2-visa-ad :user-details="userDetails" />
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <eb3-visa />
-      </v-col>
-      <v-col>
         <eb5-visa :user-details="userDetails" />
       </v-col>
+      <v-col>
+        <eb3-visa-skilled :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb3-visa-professional :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb3-visa-unskilled :user-details="userDetails" />
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col>
         <o1-visa :user-details="userDetails" />
       </v-col>
       <v-col>
         <h1b-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col cols="3">
         <f1-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col cols="3">
         <marriage :user-details="userDetails" />
       </v-col>
     </v-row>
@@ -189,6 +245,7 @@
     <!--          </v-btn>-->
     <!--        </v-card-actions>-->
     <!--      </v-card>-->
+    <v-footer> {{ userDetails }} </v-footer>
   </v-container>
 </template>
 
@@ -198,20 +255,29 @@ import J1Visa from '~/components/J1.vue'
 import L1Visa from '~/components/L1.vue'
 import Marriage from '~/components/marriage.vue'
 import EB5Visa from '~/components/Eb5.vue'
-import Eb1Visa from '~/components/Eb1.vue'
-import Eb3Visa from '~/components/Eb3.vue'
 import O1Visa from '~/components/o1.vue'
 import H1Visa from '~/components/H1B.vue'
 import F1Visa from '~/components/F1.vue'
 import Eb2VisaAd from '~/components/Eb2Ad.vue'
 import Eb2VisaEa from '~/components/Eb2Ea.vue'
 import Eb2VisaNiw from '~/components/Eb2Niw.vue'
+import EB3VisaUnskilled from '~/components/Eb3Unskilled.vue'
+import EB3VisaProfessional from '~/components/Eb3Professional.vue'
+import EB3VisaSkilled from '~/components/Eb3Skilled.vue'
+import EB1VisaOutstanding from '~/components/Eb1Outstanding.vue'
+import EB1VisaManager from '~/components/Eb1Manager.vue'
+import EB1VisaExtraOrdinary from '~/components/Eb1ExtraordinaryAbility.vue'
 
 export class UserDetails {
   age = 18
   martialStatus = false
   eb5money = false
   msc = false
+  extraordinaryAbility = false
+  professor = false
+  bsc = false
+  experienceOfTwoYears = false
+  manager = false
 }
 
 @Component({
@@ -219,8 +285,12 @@ export class UserDetails {
     F1Visa,
     H1bVisa: H1Visa,
     O1Visa,
-    Eb3Visa,
-    Eb1Visa,
+    Eb1VisaExtraOrdinary: EB1VisaExtraOrdinary,
+    Eb1VisaManager: EB1VisaManager,
+    Eb1VisaOutstanding: EB1VisaOutstanding,
+    Eb3VisaUnskilled: EB3VisaUnskilled,
+    Eb3VisaProfessional: EB3VisaProfessional,
+    Eb3VisaSkilled: EB3VisaSkilled,
     Eb5Visa: EB5Visa,
     Marriage,
     L1Visa,
@@ -234,3 +304,9 @@ export default class Index extends Vue {
   userDetails: UserDetails = new UserDetails()
 }
 </script>
+
+<style lang="scss">
+.v-tooltip__content {
+  pointer-events: initial;
+}
+</style>
