@@ -21,7 +21,7 @@ export default class EB3VisaUnskilled extends Vue {
   ]
 
   get enabled() {
-    return !this.userDetails.selfpetition ? 'colorActive' : 'colorInactive'
+    return !this.userDetails.selfPetition ? 'colorActive' : 'colorInactive'
   }
 }
 </script>

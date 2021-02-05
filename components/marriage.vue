@@ -18,7 +18,7 @@ export default class Marriage extends Vue {
   private requirements = []
 
   get enabled() {
-    return !this.userDetails.martialStatus && !this.userDetails.selfpetition
+    return !this.userDetails.maritalStatus && !this.userDetails.selfPetition
       ? 'colorActive'
       : 'colorInactive'
   }

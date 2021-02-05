@@ -31,7 +31,7 @@ export default class EB1VisaExtraOrdinary extends Vue {
 
   get enabled() {
     return this.userDetails.extraordinaryAbility ||
-      this.userDetails.selfpetition
+      this.userDetails.selfPetition
       ? 'colorActive'
       : 'colorInactive'
   }

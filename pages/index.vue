@@ -14,7 +14,7 @@
               </v-col>
               <v-col cols="3">
                 <v-checkbox
-                  v-model="userDetails.martialStatus"
+                  v-model="userDetails.maritalStatus"
                   :label="`Házas vagyok`"
                 ></v-checkbox>
               </v-col>
@@ -94,7 +94,7 @@
               </v-col>
               <v-col>
                 <v-checkbox
-                  v-model="userDetails.selfpetition"
+                  v-model="userDetails.selfPetition"
                   label="Saját jogon adom be (SelfPetition) / Nem kell amerikai munkáltató, iskola stb. hozzá"
                 />
               </v-col>
@@ -154,10 +154,10 @@
       <v-col>
         <h1b-visa :user-details="userDetails" />
       </v-col>
-      <v-col cols="3">
+      <v-col>
         <f1-visa :user-details="userDetails" />
       </v-col>
-      <v-col cols="3">
+      <v-col>
         <marriage :user-details="userDetails" />
       </v-col>
     </v-row>
@@ -273,7 +273,7 @@ import EB1VisaExtraOrdinary from '~/components/Eb1ExtraordinaryAbility.vue'
 
 export class UserDetails {
   age = 18
-  martialStatus = false
+  maritalStatus = false
   eb5money = false
   msc = false
   extraordinaryAbility = false
@@ -281,7 +281,7 @@ export class UserDetails {
   bsc = false
   experienceOfTwoYears = false
   manager = false
-  selfpetition = false
+  selfPetition = false
 }
 
 @Component({

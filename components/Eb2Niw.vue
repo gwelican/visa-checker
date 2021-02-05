@@ -30,7 +30,7 @@ export default class EB2Niw extends Vue {
   ]
 
   get enabled() {
-    return this.userDetails.selfpetition ||
+    return this.userDetails.selfPetition ||
       (this.userDetails.msc && this.userDetails.extraordinaryAbility)
       ? 'colorActive'
       : 'colorInactive'

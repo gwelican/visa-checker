@@ -32,7 +32,7 @@ export default class J1Visa extends Vue {
   get enabled() {
     return this.userDetails.age >= 18 &&
       this.userDetails.age <= 26 &&
-      !this.userDetails.selfpetition
+      !this.userDetails.selfPetition
       ? 'colorActive'
       : 'colorInactive'
   }
