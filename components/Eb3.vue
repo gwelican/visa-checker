@@ -1,14 +1,8 @@
 <template>
   <v-card>
-    <v-card-title>
-      Employment-Based Immigration: Third Preference
-    </v-card-title>
+    <v-card-title class="justify-center"> EB3 </v-card-title>
     <v-card-text>
-      <v-list>
-        <v-list-item>
-          <v-list-item-content> </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <requirements :requirements="requirements"></requirements>
     </v-card-text>
   </v-card>
 </template>
@@ -20,5 +14,7 @@ import { UserDetails } from '~/pages/index.vue'
 export default class EB3Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
+
+  private requirements = []
 }
 </script>

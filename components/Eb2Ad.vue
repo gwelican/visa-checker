@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title> EB2 : AD </v-card-title>
+    <v-card-title class="justify-center">EB2 : AD</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>

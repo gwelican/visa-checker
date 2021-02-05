@@ -1,12 +1,8 @@
 <template>
-  <v-card>
-    <v-card-title> Hazassag </v-card-title>
+  <v-card :color="userDetails.martialStatus ? 'red' : 'green'">
+    <v-card-title class="justify-center">Hazassag</v-card-title>
     <v-card-text>
-      <v-list>
-        <v-list-item>
-          <v-list-item-content> </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <requirements :requirements="requirements" />
     </v-card-text>
   </v-card>
 </template>
@@ -18,5 +14,7 @@ import { UserDetails } from '~/pages/index.vue'
 export default class Marriage extends Vue {
   @Prop()
   userDetails!: UserDetails
+
+  private requirements = []
 }
 </script>

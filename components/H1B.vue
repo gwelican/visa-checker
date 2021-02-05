@@ -1,12 +1,8 @@
 <template>
   <v-card>
-    <v-card-title> H-1B Specialty Occupations </v-card-title>
+    <v-card-title class="justify-center">H1B</v-card-title>
     <v-card-text>
-      <v-list>
-        <v-list-item>
-          <v-list-item-content> </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <requirements :requirements="requirements" />
     </v-card-text>
   </v-card>
 </template>
@@ -18,5 +14,7 @@ import { UserDetails } from '~/pages/index.vue'
 export default class H1BVisa extends Vue {
   @Prop()
   userDetails!: UserDetails
+
+  requirements = []
 }
 </script>

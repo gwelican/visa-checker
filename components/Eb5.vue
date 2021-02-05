@@ -1,6 +1,9 @@
 <template>
-  <v-card>
-    <v-card-title>EB-5 Immigrant Investor Program </v-card-title>
+  <v-card :color="userDetails.eb5money ? 'green' : 'red'">
+    <v-card-title class="justify-center">EB5 </v-card-title>
+    <v-card-text>
+      <requirements :requirements="requirements"></requirements>
+    </v-card-text>
   </v-card>
 </template>
 <script lang="ts">
@@ -11,5 +14,7 @@ import { UserDetails } from '~/pages/index.vue'
 export default class EB5Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
+
+  private requirements = []
 }
 </script>

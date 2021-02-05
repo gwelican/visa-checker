@@ -1,8 +1,7 @@
 <template>
   <v-card>
-    <v-card-title>L-1 Intracompany Transferee</v-card-title>
+    <v-card-title class="justify-center">L-1</v-card-title>
     <v-card-text>
-      Requirements:
       <requirements :requirements="requirements" />
     </v-card-text>
   </v-card>

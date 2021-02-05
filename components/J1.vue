@@ -1,5 +1,7 @@
 <template>
-  <v-card>
+  <v-card
+    :color="userDetails.age >= 18 && userDetails.age < 26 ? 'green' : 'red'"
+  >
     <v-card-title class="justify-center">J1</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements" />

@@ -62,70 +62,44 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-card
-          :color="
-            userDetails.age >= 18 && userDetails.age < 26 ? 'green' : 'red'
-          "
-        >
-          <j1-visa />
-        </v-card>
+        <j1-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <l1-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb1-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb2-visa-ea :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <eb2-visa-niw :user-details="userDetails" />
       </v-col>
       <v-col>
         <v-card>
-          <v-card-title class="justify-center"> L1</v-card-title>
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card>
-          <eb1-visa />
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card>
-          <eb2-visa-ea />
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card> <eb2-visa-niw /> </v-card
-      ></v-col>
-      <v-col>
-        <v-card>
-          <eb2-visa-ad />
+          <eb2-visa-ad :user-details="userDetails" />
         </v-card>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <v-card>
-          <v-card-title class="justify-center">EB3</v-card-title>
-        </v-card>
+        <eb3-visa />
       </v-col>
       <v-col>
-        <v-card :color="userDetails.eb5money ? 'green' : 'red'">
-          <v-card-title class="justify-center">EB5</v-card-title>
-        </v-card>
+        <eb5-visa :user-details="userDetails" />
       </v-col>
       <v-col>
-        <v-card>
-          <v-card-title class="justify-center">O1</v-card-title>
-        </v-card>
+        <o1-visa :user-details="userDetails" />
       </v-col>
       <v-col>
-        <v-card>
-          <v-card-title class="justify-center">H1b</v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title class="justify-center">F1</v-card-title>
-        </v-card>
+        <h1b-visa :user-details="userDetails" />
       </v-col>
       <v-col>
-        <v-card :color="userDetails.martialStatus ? 'red' : 'green'">
-          <v-card-title class="justify-center">Hazassag</v-card-title>
-        </v-card>
+        <f1-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <marriage :user-details="userDetails" />
       </v-col>
     </v-row>
     <!--      </v-container>-->
@@ -243,7 +217,7 @@ export class UserDetails {
 @Component({
   components: {
     F1Visa,
-    H1Visa,
+    H1bVisa: H1Visa,
     O1Visa,
     Eb3Visa,
     Eb1Visa,

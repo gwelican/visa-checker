@@ -1,14 +1,8 @@
 <template>
   <v-card>
-    <v-card-title>
-      O-1 Visa: Individuals with Extraordinary Ability or Achievement
-    </v-card-title>
+    <v-card-title class="justify-center">O-1</v-card-title>
     <v-card-text>
-      <v-list>
-        <v-list-item>
-          <v-list-item-content> </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <requirements :requirements="requirements" />
     </v-card-text>
   </v-card>
 </template>
@@ -20,5 +14,7 @@ import { UserDetails } from '~/pages/index.vue'
 export default class O1Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
+
+  private requirements = []
 }
 </script>
