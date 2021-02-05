@@ -15,7 +15,11 @@ export default class EB5Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private requirements = []
+  private requirements = [
+  'Megfelelő mértékű befektetés USA területén',
+  'Terv szerint 10 munkahely létrehozása/megtartása',
+  '',
+  ]
 
   get enabled() {
     return this.userDetails.eb5money ? 'colorActive' : 'colorInactive'

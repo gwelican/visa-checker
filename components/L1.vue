@@ -16,9 +16,10 @@ export default class L1Visa extends Vue {
   userDetails!: UserDetails
 
   requirements = [
-    'Az elmult 3 evben dolgoztal, olyan cegnek, legalabb 1' +
-      'evig megszakitas nelkul, melynek van az egyesult allamokban\n' +
-      'irodaja',
+    'Az elmúlt 3 évben dolgoztál, olyan cégnek, legalább 1' +
+      'évig megszakítás nélkül, melynek van USA területén' +
+      'irodája',
+      'Ismét ezen céghez mész dolgozni, de már az amerikai irodához'
   ]
 }
 </script>

@@ -15,7 +15,11 @@ export default class EB3VisaProfessional extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private requirements = []
+  private requirements = [
+  'Minimum BSc / főiskolai végzettség',
+  'Olyan munkakörben dolgozik, mely feltöltésére amerikai munkaerővel nincs esély',
+
+  ]
 
   get enabled() {
     return this.userDetails.bsc ? 'colorActive' : 'colorInactive'

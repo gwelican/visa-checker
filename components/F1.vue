@@ -15,6 +15,9 @@ export default class F1Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private requirements = []
+  private requirements = [
+  'Felvétel elnyerése amerikai egyetemre esetben',
+  'Tanulmányok idejére érvényes'
+  ]
 }
 </script>

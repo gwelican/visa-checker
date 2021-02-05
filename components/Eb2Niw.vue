@@ -30,7 +30,8 @@
   ]
 
   get enabled() {
-  return  (this.userDetails.selfpetition || this.userDetails.msc  ? 'colorActive' : 'colorInactive')
+
+  return ( (this.userDetails.selfpetition || this.userDetails.msc && this.userDetails.extraordinaryAbility )  ? 'colorActive' : 'colorInactive')
   }
   }
 </script>

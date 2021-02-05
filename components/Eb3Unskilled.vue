@@ -7,18 +7,21 @@
   </v-card>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
+  import { Component, Prop, Vue } from 'nuxt-property-decorator'
+  import { UserDetails } from '~/pages/index.vue'
 
-@Component({})
-export default class EB3VisaUnskilled extends Vue {
+  @Component({})
+  export default class EB3VisaUnskilled extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private requirements = []
+  private requirements = [
+  'Munkája ellátásához nincs / nem kell 2 év tapasztalat VAGY szakmai képzettség',
+  'Olyan munkakörben dolgozik, mely feltöltésére amerikai munkaerővel nincs esély',
+  ]
 
   get enabled() {
-    return 'colorActive'
+  return 'colorActive'
   }
-}
+  }
 </script>
