@@ -223,13 +223,13 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import J1Visa from '~/components/J1.vue'
 import L1Visa from '~/components/L1.vue'
 import Marriage from '~/components/marriage.vue'
-import Eb5Visa from '~/components/Eb5.vue'
+import EB5Visa from '~/components/Eb5.vue'
 import Eb1Visa from '~/components/Eb1.vue'
 import Eb3Visa from '~/components/Eb3.vue'
 import O1Visa from '~/components/o1.vue'
-import H1Visa from '~/components/h1.vue'
-import F1Visa from '~/components/f1.vue'
-import Eb2VisaAd from '~/components/Eb2aAd.vue'
+import H1Visa from '~/components/H1B.vue'
+import F1Visa from '~/components/F1.vue'
+import Eb2VisaAd from '~/components/Eb2Ad.vue'
 import Eb2VisaEa from '~/components/Eb2Ea.vue'
 import Eb2VisaNiw from '~/components/Eb2Niw.vue'
 
@@ -247,7 +247,7 @@ export class UserDetails {
     O1Visa,
     Eb3Visa,
     Eb1Visa,
-    Eb5Visa,
+    Eb5Visa: EB5Visa,
     Marriage,
     L1Visa,
     J1Visa,

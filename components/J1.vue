@@ -8,13 +8,13 @@
 </template>
 <script lang="ts">
 import { Prop, Component, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/my-visas.vue'
+import { UserDetails } from '~/pages/index.vue'
 import Requirements from '~/components/Requirements.vue'
 
 @Component({
   components: { Requirements },
 })
-export default class J1 extends Vue {
+export default class J1Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 

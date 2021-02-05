@@ -14,10 +14,10 @@
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/my-visas.vue'
+import { UserDetails } from '~/pages/index.vue'
 
 @Component
-export default class Eb3 extends Vue {
+export default class EB3Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 }

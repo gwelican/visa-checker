@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>F1: Student visa </v-card-title>
+    <v-card-title> H-1B Specialty Occupations </v-card-title>
     <v-card-text>
       <v-list>
         <v-list-item>
@@ -12,10 +12,10 @@
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/my-visas.vue'
+import { UserDetails } from '~/pages/index.vue'
 
 @Component
-export default class f1 extends Vue {
+export default class H1BVisa extends Vue {
   @Prop()
   userDetails!: UserDetails
 }

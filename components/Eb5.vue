@@ -5,10 +5,10 @@
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/my-visas.vue'
+import { UserDetails } from '~/pages/index.vue'
 
 @Component
-export default class Eb5 extends Vue {
+export default class EB5Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 }
