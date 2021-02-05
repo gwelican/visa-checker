@@ -19,11 +19,11 @@ export default class H1BVisa extends Vue {
   'Speciális szakmában nyújtana szolgáltatásokat',
   'Honvédelmi minisztériumnak nyújtana különleges szolgáltatásokat',
   'Kutatói és fejlesztői szolgáltatásokat nyújt',
-  'Minimum BSc / főiskolai diploma'
+  'Minimum BSc / főiskolai diploma',
   'Különleges tudás, ismeret birtokában van',
   'A feladat elvégzésére CSAK a jelölt képes',
   'Munkáltatótól származó munkaajánlat',
-  'VAGY'
+  'VAGY',
   'Divatmodell',
   
   ]

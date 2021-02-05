@@ -19,11 +19,11 @@
   'Nem bevándorló, maximum 3 évnyi tartózkodásra',
   'Kivételes képesség:',
   '- tudományokban',
-  '- tanulmányokban'
+  '- tanulmányokban',
   '- üzleti életben',
   '- sportban',
-  '- művészetekben'
-  '- színész vagy TV ipar elismert képviselője'
+  '- művészetekben',
+  '- színész vagy TV ipar elismert képviselője',
   'O-2: Olyan személyek, akik O-1 kategóriás művészt vagy sportolót segítenek',
   'O-3: Olyan személyek, akik O-1 vagy O-2 hozzátartozói',
   ]
