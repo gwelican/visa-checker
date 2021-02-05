@@ -19,7 +19,7 @@ export default class L1Visa extends Vue {
     'Az elmúlt 3 évben dolgoztál, olyan cégnek, legalább 1' +
       'évig megszakítás nélkül, melynek van USA területén' +
       'irodája',
-      'Ismét ezen céghez mész dolgozni, de már az amerikai irodához'
+    'Ismét ezen céghez mész dolgozni, de már az amerikai irodához',
   ]
 }
 </script>

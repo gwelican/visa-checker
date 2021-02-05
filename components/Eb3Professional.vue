@@ -16,9 +16,8 @@ export default class EB3VisaProfessional extends Vue {
   userDetails!: UserDetails
 
   private requirements = [
-  'Minimum BSc / főiskolai végzettség',
-  'Olyan munkakörben dolgozik, mely feltöltésére amerikai munkaerővel nincs esély',
-
+    'Minimum BSc / főiskolai végzettség',
+    'Olyan munkakörben dolgozik, mely feltöltésére amerikai munkaerővel nincs esély',
   ]
 
   get enabled() {

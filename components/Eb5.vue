@@ -16,9 +16,9 @@ export default class EB5Visa extends Vue {
   userDetails!: UserDetails
 
   private requirements = [
-  'Megfelelő mértékű befektetés USA területén',
-  'Terv szerint 10 munkahely létrehozása/megtartása',
-  '',
+    'Megfelelő mértékű befektetés USA területén',
+    'Terv szerint 10 munkahely létrehozása/megtartása',
+    '',
   ]
 
   get enabled() {

@@ -16,14 +16,12 @@ export default class EB3VisaSkilled extends Vue {
   userDetails!: UserDetails
 
   private requirements = [
-  'Munkája ellátásához megvan 2 év tapasztalata VAGY szakmai képzettsége',
-  'Szakmai képzettségnek elfogadható a középiskola utáni szakmai képzés',
-  
-  
+    'Munkája ellátásához megvan 2 év tapasztalata VAGY szakmai képzettsége',
+    'Szakmai képzettségnek elfogadható a középiskola utáni szakmai képzés',
   ]
 
   get enabled() {
-    return  this.userDetails.experienceOfTwoYears
+    return this.userDetails.experienceOfTwoYears
       ? 'colorActive'
       : 'colorInactive'
   }

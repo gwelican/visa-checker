@@ -58,12 +58,8 @@
                       </v-btn>
                     </template>
                     <span>
-                      Kivételes képesség:
-                      - tudományokban
-                      - művészetekben
-                      - üzleti életben
-                      - oktatásban
-                      - sportban
+                      Kivételes képesség: - tudományokban - művészetekben -
+                      üzleti életben - oktatásban - sportban
                     </span>
                   </v-tooltip>
                 </v-row>
@@ -257,25 +253,25 @@
 </template>
 
 <script lang="ts">
-  import { Component, Vue } from 'nuxt-property-decorator'
-  import J1Visa from '~/components/J1.vue'
-  import L1Visa from '~/components/L1.vue'
-  import Marriage from '~/components/marriage.vue'
-  import EB5Visa from '~/components/Eb5.vue'
-  import O1Visa from '~/components/o1.vue'
-  import H1Visa from '~/components/H1B.vue'
-  import F1Visa from '~/components/F1.vue'
-  import Eb2VisaAd from '~/components/Eb2Ad.vue'
-  import Eb2VisaEa from '~/components/Eb2Ea.vue'
-  import Eb2VisaNiw from '~/components/Eb2Niw.vue'
-  import EB3VisaUnskilled from '~/components/Eb3Unskilled.vue'
-  import EB3VisaProfessional from '~/components/Eb3Professional.vue'
-  import EB3VisaSkilled from '~/components/Eb3Skilled.vue'
-  import EB1VisaOutstanding from '~/components/Eb1Outstanding.vue'
-  import EB1VisaManager from '~/components/Eb1Manager.vue'
-  import EB1VisaExtraOrdinary from '~/components/Eb1ExtraordinaryAbility.vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+import J1Visa from '~/components/J1.vue'
+import L1Visa from '~/components/L1.vue'
+import Marriage from '~/components/marriage.vue'
+import EB5Visa from '~/components/Eb5.vue'
+import O1Visa from '~/components/o1.vue'
+import H1Visa from '~/components/H1B.vue'
+import F1Visa from '~/components/F1.vue'
+import Eb2VisaAd from '~/components/Eb2Ad.vue'
+import Eb2VisaEa from '~/components/Eb2Ea.vue'
+import Eb2VisaNiw from '~/components/Eb2Niw.vue'
+import EB3VisaUnskilled from '~/components/Eb3Unskilled.vue'
+import EB3VisaProfessional from '~/components/Eb3Professional.vue'
+import EB3VisaSkilled from '~/components/Eb3Skilled.vue'
+import EB1VisaOutstanding from '~/components/Eb1Outstanding.vue'
+import EB1VisaManager from '~/components/Eb1Manager.vue'
+import EB1VisaExtraOrdinary from '~/components/Eb1ExtraordinaryAbility.vue'
 
-  export class UserDetails {
+export class UserDetails {
   age = 18
   martialStatus = false
   eb5money = false
@@ -286,31 +282,31 @@
   experienceOfTwoYears = false
   manager = false
   selfpetition = false
-  }
+}
 
-  @Component({
+@Component({
   components: {
-  F1Visa,
-  H1bVisa: H1Visa,
-  O1Visa,
-  Eb1VisaExtraOrdinary: EB1VisaExtraOrdinary,
-  Eb1VisaManager: EB1VisaManager,
-  Eb1VisaOutstanding: EB1VisaOutstanding,
-  Eb3VisaUnskilled: EB3VisaUnskilled,
-  Eb3VisaProfessional: EB3VisaProfessional,
-  Eb3VisaSkilled: EB3VisaSkilled,
-  Eb5Visa: EB5Visa,
-  Marriage,
-  L1Visa,
-  J1Visa,
-  Eb2VisaAd,
-  Eb2VisaEa,
-  Eb2VisaNiw,
+    F1Visa,
+    H1bVisa: H1Visa,
+    O1Visa,
+    Eb1VisaExtraOrdinary: EB1VisaExtraOrdinary,
+    Eb1VisaManager: EB1VisaManager,
+    Eb1VisaOutstanding: EB1VisaOutstanding,
+    Eb3VisaUnskilled: EB3VisaUnskilled,
+    Eb3VisaProfessional: EB3VisaProfessional,
+    Eb3VisaSkilled: EB3VisaSkilled,
+    Eb5Visa: EB5Visa,
+    Marriage,
+    L1Visa,
+    J1Visa,
+    Eb2VisaAd,
+    Eb2VisaEa,
+    Eb2VisaNiw,
   },
-  })
-  export default class Index extends Vue {
+})
+export default class Index extends Vue {
   userDetails: UserDetails = new UserDetails()
-  }
+}
 </script>
 
 <style lang="scss">
