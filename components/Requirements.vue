@@ -2,11 +2,11 @@
   <v-dialog max-width="900">
     <template #activator="{ on, attrs }">
       <v-card-actions class="justify-center">
-        <v-btn v-bind="attrs" v-on="on">Kovetelmenyek</v-btn>
+        <v-btn v-bind="attrs" v-on="on">Követelmények</v-btn>
       </v-card-actions>
     </template>
     <v-card>
-      <v-card-title class="justify-center">Kovetelmenyek</v-card-title>
+      <v-card-title class="justify-center">Követelmények</v-card-title>
       <v-card-text class="justify-center">
         <v-list dense disabled>
           <v-list-item-group>
