@@ -23,16 +23,16 @@ export default class J1Visa extends Vue {
     'Kutatók számára',
     'Gyakornokok számára ',
     'Au pair-ek számára ',
-    'Csak szervezett és jóváhagyott programban ',
+    'Csak szervezett és jóváhagyott programban (táboroztatás, hivatalos au-pair szervező cégek stb.)',
     'Nem bevándorlóknak ',
-    'Max 2 év után 2 évre induló országba vissza kell térni',
+    'Max 2 év után, minimum 2 évre vissza kell térni a származási országba',
     'Visszatérés alól különös indokkal felmentés kérhető ',
   ]
 
   get enabled() {
     return this.userDetails.age >= 18 && this.userDetails.age <= 26
-      ? 'colorInactive'
-      : 'colorActive'
-  }
-}
-</script>
+      ? 'colorActive'
+      : 'colorInactive'
+      }
+      }
+    </script>
