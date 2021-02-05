@@ -1,6 +1,8 @@
 <template>
   <v-card>
-    <v-card-title class="justify-center">EB2 : Minimum MSc végzettség</v-card-title>
+    <v-card-title class="justify-center">
+      EB2: Minimum MSc végzettség
+    </v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>
