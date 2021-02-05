@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog">
     <template #activator="{ on, attrs }">
-      <v-btn v-on="on">Kovetelmenyek</v-btn>
+      <v-btn v-bind="attrs" v-on="on">Kovetelmenyek</v-btn>
     </template>
     <v-card-text>
       Kovetelmenyek:
