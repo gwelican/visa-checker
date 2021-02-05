@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title class="justify-center">EB2 : AD</v-card-title>
+    <v-card-title class="justify-center">EB2 : Minimum MSc végzettség</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>
@@ -18,7 +18,7 @@ export default class EB2Ad extends Vue {
   private requirements = [
     'Minimum MSc VAGY PhD végzettség',
     '5 év munkatapasztalat végzettségnek megfelelő területen',
-    '',
+    'Munkaajánlat szükséges USA cégtől',
     '',
   ]
 }
