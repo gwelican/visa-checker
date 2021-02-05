@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title> EB2: NIW </v-card-title>
+    <v-card-title> EB2: Nemzeti Érdek </v-card-title>
     <v-card-text>
       <requirements :requirements="requirements"></requirements>
     </v-card-text>
@@ -23,13 +23,13 @@
   '',
   'Kivételes képesség:',
   '- tudományokban',
-  '- mávészetekben',
+  '- művészetekben',
   '- üzleti életben',
   'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" ',
-  'Munkaajánlat szükséges USA cégtől',
   'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:',
   '',
   'PLUSZ',
+  '',
   'Bizonyítékok arra vonatkozólag, hogy állami érdek a jelölt beengedése még munkaajánlat nélkül is',
   '',
   '',

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title> EB2: EA </v-card-title>
+    <v-card-title> EB2: Kivételes képességek </v-card-title>
     <v-card-text>
       <v-card-text>
         <requirements :requirements="requirements"></requirements>
@@ -20,7 +20,7 @@
   private requirements = [
   'Kivételes képesség:',
   '- tudományokban',
-  '- mávészetekben',
+  '- művészetekben',
   '- üzleti életben',
   'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" ',
   'Munkaajánlat szükséges USA cégtől',
