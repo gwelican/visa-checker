@@ -20,7 +20,7 @@
             <v-col>
               <v-checkbox
                 v-model="userDetails.martialStatus"
-                :label="`Hazas`"
+                :label="`Hazas vagyok`"
               ></v-checkbox>
             </v-col>
             <v-col>

@@ -18,7 +18,7 @@ export default class EB2Ad extends Vue {
   private requirements = [
     'Minimum MSc VAGY PhD végzettség',
     '5 év munkatapasztalat végzettségnek megfelelő területen',
-    '',
+    'Munkaajánlat szükséges USA cégtől',
     '',
   ]
 }
