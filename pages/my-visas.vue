@@ -61,8 +61,12 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col v-if="userDetails.age >= 18 && userDetails.age < 26">
-        <v-card>
+      <v-col>
+        <v-card
+          :color="
+            userDetails.age >= 18 && userDetails.age < 26 ? 'green' : 'red'
+          "
+        >
           <v-card-title class="justify-center"> J1(au pair)</v-card-title>
         </v-card>
       </v-col>
@@ -88,8 +92,8 @@
           <v-card-title class="justify-center">EB3</v-card-title>
         </v-card>
       </v-col>
-      <v-col v-if="userDetails.eb5money">
-        <v-card>
+      <v-col>
+        <v-card :color="userDetails.eb5money ? 'green' : 'red'">
           <v-card-title class="justify-center">EB5</v-card-title>
         </v-card>
       </v-col>
@@ -110,8 +114,8 @@
           <v-card-title class="justify-center">F1</v-card-title>
         </v-card>
       </v-col>
-      <v-col v-if="!userDetails.martialStatus">
-        <v-card>
+      <v-col>
+        <v-card :color="userDetails.martialStatus ? 'red' : 'green'">
           <v-card-title class="justify-center">Hazassag</v-card-title>
         </v-card>
       </v-col>
