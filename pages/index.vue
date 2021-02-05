@@ -99,7 +99,7 @@
               <v-col>
                 <v-checkbox
                   v-model="userDetails.selfpetition"
-                  label="Saját jogon adom be (SelfPetition) / Nem kell amerikai munkáltató hozzá"
+                  label="Saját jogon adom be (SelfPetition) / Nem kell amerikai munkáltató, iskola stb. hozzá"
                 />
               </v-col>
             </v-row>
