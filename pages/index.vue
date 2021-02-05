@@ -67,7 +67,7 @@
             userDetails.age >= 18 && userDetails.age < 26 ? 'green' : 'red'
           "
         >
-          <v-card-title class="justify-center"> J1(au pair)</v-card-title>
+          <j1-visa />
         </v-card>
       </v-col>
       <v-col>
@@ -220,7 +220,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import J1 from '~/components/J1.vue'
+import J1Visa from '~/components/J1.vue'
 import L1Visa from '~/components/L1.vue'
 import Marriage from '~/components/marriage.vue'
 import Eb5Visa from '~/components/Eb5.vue'
@@ -250,7 +250,7 @@ export class UserDetails {
     Eb5Visa,
     Marriage,
     L1Visa,
-    AuPair: J1,
+    J1Visa,
     Eb2VisaAd,
     Eb2VisaEa,
     Eb2VisaNiw,

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>J1</v-card-title>
+    <v-card-title class="justify-center">J1</v-card-title>
     <v-card-text>
       <requirements :requirements="requirements" />
     </v-card-text>
