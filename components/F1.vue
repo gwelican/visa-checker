@@ -2,22 +2,22 @@
   <v-card>
     <v-card-title class="justify-center">F1</v-card-title>
     <v-card-text>
-      <requirements :requirements="requirements" />
+      <requirements :visa-information="visaInformation" />
     </v-card-text>
   </v-card>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { UserDetails } from '~/pages/index.vue'
+import { VisaInformation } from '~/components/visainformation'
 
 @Component
 export default class F1Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private requirements = [
-    'Felvétel elnyerése amerikai egyetemre esetben',
-    'Tanulmányok idejére érvényes',
-  ]
+  private visaInformation = new VisaInformation()
+    .addBasic('Felvétel elnyerése amerikai egyetemre esetben')
+    .addBasic('Tanulmányok idejére érvényes')
 }
 </script>
