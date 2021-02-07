@@ -9,35 +9,46 @@
   </v-card>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
-import { VisaInformation } from '~/components/visainformation'
+  import { Component, Prop, Vue } from 'nuxt-property-decorator'
+  import { UserDetails } from '~/pages/index.vue'
+  import { VisaInformation } from '~/components/visainformation'
 
-@Component
-export default class EB1VisaOutstanding extends Vue {
+  @Component
+  export default class EB1VisaOutstanding extends Vue {
   @Prop()
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Nemzetközi elismerés birtokosa')
-    .addBasic(
-      'Adott tudományterületen minimum 3 éves tapasztalat oktatóként vagy kutatóként'
-    )
-    .addBasic(
-      'Mindenképpen USA területén kell tartózkodnia pályájának folytatásához (egyetemen vagy privát munkáltatónál)'
-    )
-    .addBasic(
-      'Minimum 2 kritérium teljesítése a felsorolt 6-ból "**Examples of Documentary Evidence That A Person is an Outstanding Professor Or Researcher" fejezetben:'
-    )
-    .addLink(
-      'USCIS',
-      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1'
-    )
+  .addBasic('Nemzetközi elismerés birtokosa')
+  .addBasic(
+  'Adott tudományterületen minimum 3 éves tapasztalat oktatóként vagy kutatóként'
+  )
+  .addBasic(
+  'Mindenképpen USA területén kell tartózkodnia pályájának folytatásához (egyetemen vagy privát munkáltatónál)'
+  )
+  .addBasic(
+  'Minimum 2 kritérium teljesítése a felsorolt 6-ból "**Examples of Documentary Evidence That A Person is an Outstanding Professor Or Researcher" fejezetben:'
+  )
+  .addLink(
+  'USCIS',
+  'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1',
+  )
+  .addExpandable(
+  'Minimum 2 kritérium teljesítése a felsorolt 6-ból "**Examples of Documentary Evidence That A Person is an Outstanding Professor Or Researcher" fejezetben:',
+  [
+  'A kiemelkedő teljesítményért járó főbb díjak vagy díjak átvételének bizonyítéka',
+  'Bizonyíték a tagságról olyan egyesületekben, amelyek megkövetelik tagjaiktól a kimagasló teljesítmény bemutatását',
+  'Bizonyíték a szakmai publikációkban közzétett anyagról, amelyet mások írtak a jelölt tudományos területen végzett munkájáról',
+  'Bizonyíték a részvételre - testületben vagy egyénileg - mások munkájának bírájaként ugyanazon vagy a vele rokon tudományos területen',
+  'Bizonyíték a "felfedezés jellegű" tudományos vagy tudományos kutatási hozzájárulásról a szakterületen',
+  'Bizonyíték a szakterület tudományos könyveinek vagy cikkeinek (nemzetközi forgalommal bíró tudományos folyóiratokban) szerzőségéről'
+  ]
+  )
 
   get enabled() {
-    return this.userDetails.professor || this.userDetails.extraordinaryAbility
-      ? 'colorActive'
-      : 'colorInactive'
+  return this.userDetails.professor || this.userDetails.extraordinaryAbility
+  ? 'colorActive'
+  : 'colorInactive'
   }
-}
+  }
 </script>

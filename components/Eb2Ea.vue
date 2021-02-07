@@ -9,36 +9,49 @@
   </v-card>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
-import { VisaInformation } from '~/components/visainformation'
+  import { Component, Prop, Vue } from 'nuxt-property-decorator'
+  import { UserDetails } from '~/pages/index.vue'
+  import { VisaInformation } from '~/components/visainformation'
 
-@Component
-export default class EB2Ea extends Vue {
+  @Component
+  export default class EB2Ea extends Vue {
   @Prop()
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Kivételes képesség:')
-    .addBasic('- tudományokban')
-    .addBasic('- művészetekben')
-    .addBasic('- üzleti életben')
-    .addBasic(
-      'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" '
-    )
-    .addBasic('Munkaajánlat szükséges USA cégtől')
-    .addBasic(
-      'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:'
-    )
-    .addLink(
-      'uscis',
-      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2'
-    )
+  .addBasic('Kivételes képesség:')
+  .addBasic('- tudományokban')
+  .addBasic('- művészetekben')
+  .addBasic('- üzleti életben')
+  .addBasic(
+  'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" '
+  )
+  .addBasic('Munkaajánlat szükséges USA cégtől')
+  .addBasic(
+  'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:'
+  )
+  .addLink(
+  'uscis',
+  'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2'
+  )
+  .addExpandable(
+  'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:',
+  [
+  'Hivatalos tanulmányi nyilvántartás, amely azt mutatja, hogy rendelkezik diplomával, bizonyítvánnyal vagy hasonló bizonyítvánnyal egy főiskolán, egyetemen vagy más, a kivételes képességű területekhez kapcsolódó oktatási intézményben.',
+  'Bizonyítékok, amelyek legalább 10 éves teljes munkaidős tapasztalatot dokumentálnak az Ön szakmájában (munkakönyv, TB-könyv stb)',
+  'Szakma gyakorlásának engedélye vagy szakmája, foglalkozása igazolása (bizonyítványok, igazolások)',
+  'Bizonyíték arra, hogy olyan fizetést vagy más díjazást ért el a munkájáért, szolgáltatásaiért, ami bizonyítja kivételes képességeit',
+  'Tagság szakmai szövetség(ek) ben',
+  'Szakmai társaságok, kormányzati szervek, szakmai vagy üzleti szervezetek elismerik elért eredményeit és az iparához vagy szakterületéhez való jelentős hozzájárulást',
+  'A jogosultság egyéb összehasonlítható bizonyítéka is elfogadható.',
+  ]
+  )
+
 
   get enabled() {
-    return this.userDetails.extraordinaryAbility
-      ? 'colorActive'
-      : 'colorInactive'
+  return this.userDetails.extraordinaryAbility
+  ? 'colorActive'
+  : 'colorInactive'
   }
-}
+  }
 </script>

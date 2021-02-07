@@ -9,46 +9,46 @@
   </v-card>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { UserDetails } from '~/pages/index.vue'
-import { VisaInformation } from '~/components/visainformation'
+  import { Component, Prop, Vue } from 'nuxt-property-decorator'
+  import { UserDetails } from '~/pages/index.vue'
+  import { VisaInformation } from '~/components/visainformation'
 
-@Component
-export default class EB1VisaExtraOrdinary extends Vue {
+  @Component
+  export default class EB1VisaExtraOrdinary extends Vue {
   @Prop()
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Kivételes képesség:')
-    .addBasic('- tudományokban')
-    .addBasic('- művészetekben')
-    .addBasic('- üzleti életben')
-    .addBasic('- oktatásban')
-    .addBasic('- sportban')
-    .addBasic(
-      'Kivételes képesség: nemzeti vagy nemzetközi elismerés az eredményekről, versenyeredmények, oklevelek'
-    )
-    .addExpandable(
-      'Minimum 3 kritérium teljesítése a felsorolt 10-ből "*Criteria for Extraordinary Ability" fejezetben',
-      [
-        'Evidence of receipt of lesser nationally or internationally recognized prizes or awards for excellence',
-        'Evidence of your membership in associations in the field which demand outstanding achievement of their members',
-        'Evidence of published material about you in professional or major trade publications or other major media',
-        'Evidence that you have been asked to judge the work of others, either individually or on a panel',
-        'Evidence of your original scientific, scholarly, artistic, athletic, or business-related contributions of major significance to the field',
-        'Evidence of your authorship of scholarly articles in professional or major trade publications or other major media',
-        'Evidence that your work has been displayed at artistic exhibitions or showcases',
-        'Evidence of your performance of a leading or critical role in distinguished organizations',
-        'Evidence that you command a high salary or other significantly high remuneration in relation to others in the field',
-        'Evidence of your commercial successes in the performing arts',
-      ]
-    )
+  .addBasic('Kivételes képesség:')
+  .addBasic('- tudományokban')
+  .addBasic('- művészetekben')
+  .addBasic('- üzleti életben')
+  .addBasic('- oktatásban')
+  .addBasic('- sportban')
+  .addBasic(
+  'Kivételes képesség: nemzeti vagy nemzetközi elismerés az eredményekről, versenyeredmények, oklevelek'
+  )
+  .addExpandable(
+  'Minimum 3 kritérium teljesítése a felsorolt 10-ből "*Criteria for Extraordinary Ability" fejezetben',
+  [
+  'Bizonyíték kisebb nemzeti vagy nemzetközileg elismert díjak vagy kitüntetések átvételéről',
+  'Bizonyíték tagságról a szakterület egyesületeiben, amely tagsághoz kiemelkedő teljesítményt követelnek',
+  'Bizonyíték a rólad közzétett anyagra szakmai vagy nagy kereskedelmi kiadványokban vagy más jelentősebb médiában',
+  'Bizonyíték arra, hogy felkérést kapott bíraként, mások munkájának értékelésére önállóan vagy testületi részvételben',
+  'Bizonyíték az eredeti tudományos, művészeti, atlétikai vagy üzleti vonatkozású eredményeiről, amelyek nagy jelentőséggel bírnak a területen',
+  'Bizonyíték a szakmai cikkek, szakmai vagy nagyobb szakfolyóiratokban vagy más nagy médiában írt tudományos cikkéről',
+  'Bizonyíték arra, hogy munkáját művészi kiállításokon vagy bemutatókon mutatták be',
+  'Bizonyíték arra, hogy a jeles szervezeteknél vezető vagy kritikus szerepet töltött be',
+  'Bizonyíték arra, hogy magas fizetést vagy más jelentősen magas díjazást ért el az adott területen dolgozókkal szemben',
+  'Bizonyíték az előadóművészetben elért kereskedelmi sikereidről',
+  ]
+  )
 
   get enabled() {
-    return this.userDetails.extraordinaryAbility ||
-      this.userDetails.selfPetition
-      ? 'colorActive'
-      : 'colorInactive'
+  return this.userDetails.extraordinaryAbility ||
+  this.userDetails.selfPetition
+  ? 'colorActive'
+  : 'colorInactive'
   }
-}
+  }
 </script>
