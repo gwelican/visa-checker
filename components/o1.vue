@@ -1,8 +1,9 @@
 <template>
-  <v-card :color="enabled">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">O1 Kivételes képességek</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -18,18 +19,20 @@ export default class O1Visa extends Vue {
 
   private visaInformation = new VisaInformation()
 
-    .addBasic('Nem bevándorló, maximum 3 évnyi tartózkodásra')
-    .addBasic('Kivételes képesség:')
-    .addBasic('- tudományokban')
-    .addBasic('- tanulmányokban')
-    .addBasic('- üzleti életben')
-    .addBasic('- sportban')
-    .addBasic('- művészetekben')
-    .addBasic('- színész vagy TV ipar elismert képviselője')
-    .addBasic(
+    .withBasicInformation('Nem bevándorló, maximum 3 évnyi tartózkodásra')
+    .withBasicInformation('Kivételes képesség:')
+    .withBasicInformation('- tudományokban')
+    .withBasicInformation('- tanulmányokban')
+    .withBasicInformation('- üzleti életben')
+    .withBasicInformation('- sportban')
+    .withBasicInformation('- művészetekben')
+    .withBasicInformation('- színész vagy TV ipar elismert képviselője')
+    .withBasicInformation(
       'O-2: Olyan személyek, akik O-1 kategóriás művészt vagy sportolót segítenek'
     )
-    .addBasic('O-3: Olyan személyek, akik O-1 vagy O-2 hozzátartozói')
+    .withBasicInformation(
+      'O-3: Olyan személyek, akik O-1 vagy O-2 hozzátartozói'
+    )
 
   get enabled() {
     return this.userDetails.extraordinaryAbility

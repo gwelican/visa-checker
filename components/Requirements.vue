@@ -5,6 +5,27 @@
         <v-btn v-bind="attrs" v-on="on">Követelmények</v-btn>
       </v-card-actions>
     </template>
+    <v-card
+      v-if="
+        visaInformation.additionalInformation &&
+        visaInformation.additionalInformation.length > 0
+      "
+    >
+      <v-card-title class="justify-center">Általános információk</v-card-title>
+      <v-card-text>
+        <v-list>
+          <v-list-item
+            v-for="info in visaInformation.additionalInformation"
+            :key="info"
+          >
+            <v-list-item-icon>
+              <v-icon>mdi-square-small</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>{{ info }}</v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
     <v-card v-if="visaInformation">
       <v-card-title class="justify-center">Követelmények</v-card-title>
       <v-card-text class="justify-center">

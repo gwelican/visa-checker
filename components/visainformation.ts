@@ -13,22 +13,23 @@ export class VisaInformation {
   private _basicRequirements: string[] = []
   private _groupedRequirements: StringToStringArrayMap = {}
   private _links: Link[] = []
+  private _additionalInformation: string[] = []
 
-  addLink(text: string, href: string) {
+  withLink(text: string, href: string) {
     this._links.push(new Link(text, href))
     return this
   }
 
-  addBasic(text: string) {
+  withBasicInformation(text: string) {
     this._basicRequirements.push(text)
     return this
   }
 
-  addExpandable(key: string, strings: string[]) {
+  withExpandableInformation(key: string, values: string[]) {
     if (key in this._groupedRequirements) {
-      this._groupedRequirements[key].push(...strings)
+      this._groupedRequirements[key].push(...values)
     } else {
-      this._groupedRequirements[key] = strings
+      this._groupedRequirements[key] = values
     }
     return this
   }
@@ -43,5 +44,14 @@ export class VisaInformation {
 
   get links() {
     return this._links
+  }
+
+  withAdditionalInformation(text: string) {
+    this._additionalInformation.push(text)
+    return this
+  }
+
+  get additionalInformation() {
+    return this._additionalInformation
   }
 }

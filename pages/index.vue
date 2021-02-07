@@ -6,22 +6,22 @@
           <v-card-title> Személyes adatok </v-card-title>
           <v-card-text>
             <v-row justify="space-between">
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-text-field
                   v-model="userDetails.age"
                   label="Eletkor"
                 ></v-text-field>
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-checkbox
                   v-model="userDetails.maritalStatus"
                   :label="`Házas vagyok`"
                 ></v-checkbox>
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-checkbox v-model="userDetails.msc" label="Van msc/phd" />
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-checkbox
                   v-model="userDetails.bsc"
                   label="Van BSc/főiskolai végzettség"
@@ -33,19 +33,19 @@
         <v-card>
           <v-card-text>
             <v-row>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-checkbox
                   v-model="userDetails.eb5money"
                   label="Befektetek $900.000-t"
                 />
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-checkbox
                   v-model="userDetails.experienceOfTwoYears"
                   label="Legalább 2 év szakmai gyakorlat"
                 />
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-row align="center" no-gutters>
                   <v-checkbox
                     v-model="userDetails.extraordinaryAbility"
@@ -64,7 +64,7 @@
                   </v-tooltip>
                 </v-row>
               </v-col>
-              <v-col cols="3">
+              <v-col lg="3">
                 <v-row align="center" no-gutters>
                   <v-col>
                     <v-checkbox
@@ -107,7 +107,6 @@
       <v-col>
         <j1-visa :user-details="userDetails" />
       </v-col>
-
       <v-col>
         <eb1-visa-extra-ordinary :user-details="userDetails" />
       </v-col>
@@ -148,18 +147,18 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col lg="3">
         <o1-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col lg="3">
         <h1b-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col lg="3">
         <f1-visa :user-details="userDetails" />
       </v-col>
-      <v-col>
-        <marriage :user-details="userDetails" />
-      </v-col>
+      <!--      <v-col>-->
+      <!--        <marriage :user-details="userDetails" />-->
+      <!--      </v-col>-->
     </v-row>
     <!--      </v-container>-->
     <!--        <au-pair-->

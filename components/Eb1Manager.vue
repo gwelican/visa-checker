@@ -1,10 +1,11 @@
 <template>
-  <v-card :color="enabled">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">
       EB1: Nemzetközi cégvezető
     </v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation"></requirements>
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>

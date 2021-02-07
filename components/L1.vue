@@ -3,6 +3,11 @@
     <v-card-title class="justify-center">L-1</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
+      <VisaOpportunities
+        :greencard="false"
+        :work="true"
+        :eligible-for-green-card="true"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -17,9 +22,13 @@ export default class L1Visa extends Vue {
   userDetails!: UserDetails
 
   visaInformation = new VisaInformation()
-    .addBasic('Az elmúlt 3 évben dolgoztál, olyan cégnek, legalább 1')
-    .addBasic('évig megszakítás nélkül, melynek van USA területén')
-    .addBasic('irodája')
-    .addBasic('Ismét ezen céghez mész dolgozni, de már az amerikai irodához')
+    .withBasicInformation(
+      'Az elmúlt 3 évben dolgoztál, olyan cégnek, legalább 1'
+    )
+    .withBasicInformation('évig megszakítás nélkül, melynek van USA területén')
+    .withBasicInformation('irodája')
+    .withBasicInformation(
+      'Ismét ezen céghez mész dolgozni, de már az amerikai irodához'
+    )
 }
 </script>

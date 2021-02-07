@@ -1,10 +1,11 @@
 <template>
-  <v-card :color="enabled">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">
       EB2: Minimum MSc végzettség
     </v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation"></requirements>
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -19,9 +20,11 @@ export default class EB2Ad extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Minimum MSc VAGY PhD végzettség')
-    .addBasic('5 év munkatapasztalat végzettségnek megfelelő területen')
-    .addBasic('Munkaajánlat szükséges USA cégtől')
+    .withBasicInformation('Minimum MSc VAGY PhD végzettség')
+    .withBasicInformation(
+      '5 év munkatapasztalat végzettségnek megfelelő területen'
+    )
+    .withBasicInformation('Munkaajánlat szükséges USA cégtől')
 
   get enabled() {
     return this.userDetails.msc ? 'colorActive' : 'colorInactive'

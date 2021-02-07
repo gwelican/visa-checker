@@ -1,8 +1,9 @@
 <template>
-  <v-card :color="enabled">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">EB3: diplomás munkaerő</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation"></requirements>
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -17,8 +18,8 @@ export default class EB3VisaProfessional extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Minimum BSc / főiskolai végzettség')
-    .addBasic(
+    .withBasicInformation('Minimum BSc / főiskolai végzettség')
+    .withBasicInformation(
       'Olyan munkakörben dolgozik, mely feltöltésére amerikai munkaerővel nincs esély'
     )
 

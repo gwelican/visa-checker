@@ -1,5 +1,5 @@
 <template>
-  <v-card :color="enabled">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">Hazassag</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />

@@ -3,6 +3,7 @@
     <v-card-title class="justify-center">H1B</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
+      <VisaOpportunities :greencard="false" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -17,14 +18,16 @@ export default class H1BVisa extends Vue {
   userDetails!: UserDetails
 
   visaInformation = new VisaInformation()
-    .addBasic('Speciális szakmában nyújtana szolgáltatásokat')
-    .addBasic('Honvédelmi minisztériumnak nyújtana különleges szolgáltatásokat')
-    .addBasic('Kutatói és fejlesztői szolgáltatásokat nyújt')
-    .addBasic('Minimum BSc / főiskolai diploma')
-    .addBasic('Különleges tudás, ismeret birtokában van')
-    .addBasic('A feladat elvégzésére CSAK a jelölt képes')
-    .addBasic('Munkáltatótól származó munkaajánlat')
-    .addBasic('VAGY')
-    .addBasic('Divatmodell')
+    .withBasicInformation('Speciális szakmában nyújtana szolgáltatásokat')
+    .withBasicInformation(
+      'Honvédelmi minisztériumnak nyújtana különleges szolgáltatásokat'
+    )
+    .withBasicInformation('Kutatói és fejlesztői szolgáltatásokat nyújt')
+    .withBasicInformation('Minimum BSc / főiskolai diploma')
+    .withBasicInformation('Különleges tudás, ismeret birtokában van')
+    .withBasicInformation('A feladat elvégzésére CSAK a jelölt képes')
+    .withBasicInformation('Munkáltatótól származó munkaajánlat')
+    .withBasicInformation('VAGY')
+    .withBasicInformation('Divatmodell')
 }
 </script>

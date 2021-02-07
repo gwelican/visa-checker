@@ -1,8 +1,9 @@
 <template>
-  <v-card>
+  <v-card height="100%">
     <v-card-title class="justify-center">F1</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -17,7 +18,7 @@ export default class F1Visa extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic('Felvétel elnyerése amerikai egyetemre esetben')
-    .addBasic('Tanulmányok idejére érvényes')
+    .withBasicInformation('Felvétel elnyerése amerikai egyetemre esetben')
+    .withBasicInformation('Tanulmányok idejére érvényes')
 }
 </script>

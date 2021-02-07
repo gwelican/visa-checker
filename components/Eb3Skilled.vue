@@ -3,6 +3,7 @@
     <v-card-title class="justify-center">EB3: szakmunkás</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation"></requirements>
+      <VisaOpportunities :greencard="true" :work="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -17,10 +18,10 @@ export default class EB3VisaSkilled extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .addBasic(
+    .withBasicInformation(
       'Munkája ellátásához megvan 2 év tapasztalata VAGY szakmai képzettsége'
     )
-    .addBasic(
+    .withBasicInformation(
       'Szakmai képzettségnek elfogadható a középiskola utáni szakmai képzés'
     )
 
