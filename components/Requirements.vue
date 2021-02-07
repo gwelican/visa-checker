@@ -46,7 +46,7 @@
     </v-card>
 
     <v-card v-if="visaInformation.links && visaInformation.links.length > 0">
-      <v-card-title>Hasznos linkek {{ visaInformation.links }}</v-card-title>
+      <v-card-title>Hasznos linkek</v-card-title>
       <v-card-text>
         <a
           v-for="link in visaInformation.links"
