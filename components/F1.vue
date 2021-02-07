@@ -3,7 +3,7 @@
     <v-card-title class="justify-center">F1</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
-      <VisaOpportunities :greencard="true" :work="true" />
+      <VisaOpportunities :greencard="false" :work="true" />
     </v-card-text>
   </v-card>
 </template>

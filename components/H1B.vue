@@ -3,7 +3,12 @@
     <v-card-title class="justify-center">H1B</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
-      <VisaOpportunities :greencard="false" :work="true" />
+      <VisaOpportunities
+        :greencard="false"
+        :work="true"
+        :eligible-for-green-card="true"
+        green-card-eligibility-message="Munkaltaton keresztul"
+      />
     </v-card-text>
   </v-card>
 </template>

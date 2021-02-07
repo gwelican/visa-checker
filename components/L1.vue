@@ -7,6 +7,7 @@
         :greencard="false"
         :work="true"
         :eligible-for-green-card="true"
+        green-card-eligibility-message="Munkaltaton keresztul"
       />
     </v-card-text>
   </v-card>

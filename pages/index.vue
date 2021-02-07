@@ -105,7 +105,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <j1-visa :user-details="userDetails" />
+        <o1-visa :user-details="userDetails" />
       </v-col>
       <v-col>
         <eb1-visa-extra-ordinary :user-details="userDetails" />
@@ -119,7 +119,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <l1-visa :user-details="userDetails" />
+        <eb5-visa :user-details="userDetails" />
       </v-col>
 
       <v-col>
@@ -133,29 +133,30 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <eb5-visa :user-details="userDetails" />
-      </v-col>
-      <v-col>
+      <v-col cols="3">
         <eb3-visa-skilled :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col cols="3">
         <eb3-visa-professional :user-details="userDetails" />
       </v-col>
-      <v-col>
+      <v-col cols="3">
         <eb3-visa-unskilled :user-details="userDetails" />
       </v-col>
     </v-row>
     <v-row>
-      <v-col lg="3">
-        <o1-visa :user-details="userDetails" />
-      </v-col>
-      <v-col lg="3">
+      <v-col>
         <h1b-visa :user-details="userDetails" />
       </v-col>
-      <v-col lg="3">
+      <v-col>
         <f1-visa :user-details="userDetails" />
       </v-col>
+      <v-col>
+        <j1-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
+        <l1-visa :user-details="userDetails" />
+      </v-col>
+
       <!--      <v-col>-->
       <!--        <marriage :user-details="userDetails" />-->
       <!--      </v-col>-->

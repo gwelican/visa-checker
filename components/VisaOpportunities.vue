@@ -16,6 +16,14 @@
         <v-icon>
           {{ eligibleForGreenCard ? 'mdi-check' : 'mdi-close' }}
         </v-icon>
+        <span
+          v-if="
+            greenCardEligibilityMessage &&
+            greenCardEligibilityMessage.length > 0
+          "
+        >
+          ({{ greenCardEligibilityMessage }})
+        </span>
       </v-col>
     </v-row>
   </v-container>
@@ -33,6 +41,9 @@ export default class VisaOpportunities extends Vue {
 
   @Prop({ default: false })
   eligibleForGreenCard: boolean
+
+  @Prop({ default: '' })
+  greenCardEligibilityMessage: string
 }
 </script>
 
