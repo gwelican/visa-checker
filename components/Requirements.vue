@@ -70,7 +70,7 @@ export default class Requirements extends Vue {
 
   @Prop({
     default: () => {
-      new VisaInformation()
+      return new VisaInformation()
     },
   })
   visaInformation!: VisaInformation
