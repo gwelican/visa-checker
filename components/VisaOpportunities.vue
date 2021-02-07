@@ -33,17 +33,17 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class VisaOpportunities extends Vue {
-  @Prop({ default: false })
-  greencard: boolean
+  @Prop()
+  greencard: boolean = false
 
-  @Prop({ default: false })
-  work: boolean
+  @Prop()
+  work: boolean = false
 
-  @Prop({ default: false })
-  eligibleForGreenCard: boolean
+  @Prop()
+  eligibleForGreenCard: boolean = false
 
-  @Prop({ default: '' })
-  greenCardEligibilityMessage: string
+  @Prop()
+  greenCardEligibilityMessage: string = ''
 }
 </script>
 
