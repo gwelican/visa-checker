@@ -7,7 +7,7 @@
       </v-col>
       <v-col v-if="!greencard" cols="6" class="text-right">Munka</v-col>
       <v-col v-if="!greencard" cols="6" class="text-left">
-        <v-icon>{{ work ? 'mdi-check' : 'mdi-close' }}</v-icon>
+        <v-icon>{{ eligibleForWork ? 'mdi-check' : 'mdi-close' }}</v-icon>
       </v-col>
       <v-col v-if="greencard === false" cols="6" class="text-right">
         Zöldkártya szerezhető
@@ -33,17 +33,17 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class VisaOpportunities extends Vue {
-  @Prop()
-  greencard: boolean = false
+  @Prop({ default: false })
+  greencard!: boolean
 
-  @Prop()
-  work: boolean = false
+  @Prop({ default: false })
+  eligibleForWork!: boolean
 
-  @Prop()
-  eligibleForGreenCard: boolean = false
+  @Prop({ default: false })
+  eligibleForGreenCard!: boolean
 
-  @Prop()
-  greenCardEligibilityMessage: string = ''
+  @Prop({ default: '' })
+  greenCardEligibilityMessage!: string
 }
 </script>
 

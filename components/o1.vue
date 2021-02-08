@@ -3,7 +3,7 @@
     <v-card-title class="justify-center">O1 Kivételes képességek</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
-      <VisaOpportunities :greencard="true" :work="true" />
+      <VisaOpportunities :greencard="true" eligible-for-work="true" />
     </v-card-text>
   </v-card>
 </template>

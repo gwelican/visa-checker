@@ -5,7 +5,7 @@
       <requirements :visa-information="visaInformation" />
       <VisaOpportunities
         :greencard="false"
-        :work="true"
+        eligible-for-work="true"
         :eligible-for-green-card="true"
         green-card-eligibility-message="Munkaltaton keresztul"
       />

@@ -3,7 +3,7 @@
     <v-card-title class="justify-center">EB3: szakmunkás</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation"></requirements>
-      <VisaOpportunities :greencard="true" :work="true" />
+      <VisaOpportunities :greencard="true" eligible-for-work="true" />
     </v-card-text>
   </v-card>
 </template>
