@@ -20,20 +20,7 @@ export default class EB1VisaOutstanding extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .withBasicInformation('Nemzetközi elismerés birtokosa')
-    .withBasicInformation(
-      'Adott tudományterületen minimum 3 éves tapasztalat oktatóként vagy kutatóként'
-    )
-    .withBasicInformation(
-      'Mindenképpen USA területén kell tartózkodnia pályájának folytatásához (egyetemen vagy privát munkáltatónál)'
-    )
-    .withBasicInformation(
-      'Minimum 2 kritérium teljesítése a felsorolt 6-ból "**Examples of Documentary Evidence That A Person is an Outstanding Professor Or Researcher" fejezetben:'
-    )
-    .withLink(
-      'USCIS',
-      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1'
-    )
+    .withBasicInformation('Munkaajánlat egy amerikai cégtől ')
     .withExpandableInformation(
       'Minimum 2 kritérium teljesítése a felsorolt 6-ból "**Examples of Documentary Evidence That A Person is an Outstanding Professor Or Researcher" fejezetben:',
       [
@@ -45,9 +32,15 @@ export default class EB1VisaOutstanding extends Vue {
         'Bizonyíték a szakterület tudományos könyveinek vagy cikkeinek (nemzetközi forgalommal bíró tudományos folyóiratokban) szerzőségéről',
       ]
     )
+    .withLink(
+      'USCIS',
+      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1'
+    )
 
   get enabled() {
-    return this.userDetails.professor || this.userDetails.extraordinaryAbility
+    return (this.userDetails.professor ||
+      this.userDetails.extraordinaryAbility) &&
+      !this.userDetails.selfPetition
       ? 'colorActive'
       : 'colorInactive'
   }

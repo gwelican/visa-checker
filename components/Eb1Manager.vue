@@ -20,6 +20,10 @@ export default class EB1VisaManager extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
+    .withBasicInformation('Vezető vagy manager pozícióban fogsz dolgozni')
+    .withBasicInformation(
+      'Kérvényező cég kapcsolatban áll(leányvállalat), vagy ugyanaz a cég amelynél jelenleg is vezető vagy manager pozícióban vagy alkalmazva'
+    )
 
   get enabled() {
     return this.userDetails.manager ? 'colorActive' : 'colorInactive'
