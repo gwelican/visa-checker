@@ -20,15 +20,6 @@ export default class EB1VisaExtraOrdinary extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .withBasicInformation('Kivételes képesség:')
-    .withBasicInformation('- tudományokban')
-    .withBasicInformation('- művészetekben')
-    .withBasicInformation('- üzleti életben')
-    .withBasicInformation('- oktatásban')
-    .withBasicInformation('- sportban')
-    .withBasicInformation(
-      'Kivételes képesség: nemzeti vagy nemzetközi elismerés az eredményekről, versenyeredmények, oklevelek'
-    )
     .withExpandableInformation(
       'Minimum 3 kritérium teljesítése a felsorolt 10-ből "*Criteria for Extraordinary Ability" fejezetben',
       [
@@ -43,6 +34,10 @@ export default class EB1VisaExtraOrdinary extends Vue {
         'Bizonyíték arra, hogy magas fizetést vagy más jelentősen magas díjazást ért el az adott területen dolgozókkal szemben',
         'Bizonyíték az előadóművészetben elért kereskedelmi sikereidről',
       ]
+    )
+    .withLink(
+      'USCIS',
+      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1'
     )
 
   get enabled() {

@@ -19,7 +19,7 @@ export default class EB5Visa extends Vue {
 
   private visaInformation = new VisaInformation()
     .withBasicInformation('Megfelelő mértékű befektetés USA területén')
-    .withBasicInformation('Terv szerint 10 munkahely létrehozása/megtartása')
+    .withBasicInformation('10 munkahely létrehozása/megtartása')
 
   get enabled() {
     return this.userDetails.eb5money ? 'colorActive' : 'colorInactive'

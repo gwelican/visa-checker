@@ -15,7 +15,7 @@
               <v-col lg="3">
                 <v-checkbox
                   v-model="userDetails.maritalStatus"
-                  :label="`Házas vagyok`"
+                  label="Házas vagyok"
                 ></v-checkbox>
               </v-col>
               <v-col lg="3">
@@ -49,7 +49,7 @@
                 <v-row align="center" no-gutters>
                   <v-checkbox
                     v-model="userDetails.extraordinaryAbility"
-                    label="Rendkívüli képesség\eredmény"
+                    label="Rendkívüli képesség/eredmény"
                   />
                   <v-tooltip top close-delay="2000">
                     <template #activator="{ on, attrs }">
@@ -86,16 +86,16 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col>
+              <v-col cols="3">
                 <v-checkbox
                   v-model="userDetails.manager"
                   label="Nemzetközi cégnél vezető"
                 />
               </v-col>
-              <v-col>
+              <v-col cols="9">
                 <v-checkbox
                   v-model="userDetails.selfPetition"
-                  label="Saját jogon adom be (SelfPetition) / Nem kell amerikai munkáltató, iskola stb. hozzá"
+                  label="Saját jogon adom be (SelfPetition) / Nem kell munkáltató/iskola hozzá"
                 />
               </v-col>
             </v-row>
@@ -126,10 +126,10 @@
         <eb2-visa-ea :user-details="userDetails" />
       </v-col>
       <v-col>
-        <eb2-visa-niw :user-details="userDetails" />
+        <eb2-visa-ad :user-details="userDetails" />
       </v-col>
       <v-col>
-        <eb2-visa-ad :user-details="userDetails" />
+        <eb2-visa-niw :user-details="userDetails" />
       </v-col>
     </v-row>
     <v-row>
@@ -156,98 +156,7 @@
       <v-col>
         <l1-visa :user-details="userDetails" />
       </v-col>
-
-      <!--      <v-col>-->
-      <!--        <marriage :user-details="userDetails" />-->
-      <!--      </v-col>-->
     </v-row>
-    <!--      </v-container>-->
-    <!--        <au-pair-->
-    <!--          v-if="userDetails.age >= 18 && userDetails.age < 26"-->
-    <!--          :user-details="userDetails"-->
-    <!--        />-->
-    <!--        <l1-visa :user-details="userDetails" />-->
-    <!--        <marriage-->
-    <!--          v-if="!userDetails.martialStatus"-->
-    <!--          :user-details="userDetails"-->
-    <!--        />-->
-    <!--        <eb5-visa v-if="userDetails.eb5money" :user-details="userDetails" />-->
-    <!--        <eb1-visa :user-details="userDetails" />-->
-    <!--        <eb2-visa :user-details="userDetails" />-->
-    <!--        <eb3-visa :user-details="userDetails" />-->
-    <!--        <o1-visa :user-details="userDetails" />-->
-    <!--        <h1-visa :user-details="userDetails" />-->
-    <!--        <f1-visa :user-details="userDetails" />-->
-    <!--      </v-container>-->
-    <!--      <v-card>-->
-    <!--        <v-card-title class="headline">-->
-    <!--          Welcome to the Vuetify + Nuxt.js template-->
-    <!--        </v-card-title>-->
-    <!--        <v-card-text>-->
-    <!--          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was-->
-    <!--            designed to empower developers to create amazing applications.</p>-->
-    <!--          <p>-->
-    <!--            For more information on Vuetify, check out the <a-->
-    <!--            href="https://vuetifyjs.com"-->
-    <!--            target="_blank"-->
-    <!--            rel="noopener noreferrer"-->
-    <!--          >-->
-    <!--            documentation-->
-    <!--          </a>.-->
-    <!--          </p>-->
-    <!--          <p>-->
-    <!--            If you have questions, please join the official <a-->
-    <!--            href="https://chat.vuetifyjs.com/"-->
-    <!--            target="_blank"-->
-    <!--            rel="noopener noreferrer"-->
-    <!--            title="chat"-->
-    <!--          >-->
-    <!--            discord-->
-    <!--          </a>.-->
-    <!--          </p>-->
-    <!--          <p>-->
-    <!--            Find a bug? Report it on the github <a-->
-    <!--            href="https://github.com/vuetifyjs/vuetify/issues"-->
-    <!--            target="_blank"-->
-    <!--            rel="noopener noreferrer"-->
-    <!--            title="contribute"-->
-    <!--          >-->
-    <!--            issue board-->
-    <!--          </a>.-->
-    <!--          </p>-->
-    <!--          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting-->
-    <!--            features in the future.</p>-->
-    <!--          <div class="text-xs-right">-->
-    <!--            <em><small>&mdash; John Leider</small></em>-->
-    <!--          </div>-->
-    <!--          <hr class="my-3">-->
-    <!--          <a-->
-    <!--            href="https://nuxtjs.org/"-->
-    <!--            target="_blank"-->
-    <!--            rel="noopener noreferrer"-->
-    <!--          >-->
-    <!--            Nuxt Documentation-->
-    <!--          </a>-->
-    <!--          <br>-->
-    <!--          <a-->
-    <!--            href="https://github.com/nuxt/nuxt.js"-->
-    <!--            target="_blank"-->
-    <!--            rel="noopener noreferrer"-->
-    <!--          >-->
-    <!--            Nuxt GitHub-->
-    <!--          </a>-->
-    <!--        </v-card-text>-->
-    <!--        <v-card-actions>-->
-    <!--          <v-spacer/>-->
-    <!--          <v-btn-->
-    <!--            color="primary"-->
-    <!--            nuxt-->
-    <!--            to="/inspire"-->
-    <!--          >-->
-    <!--            Continue-->
-    <!--          </v-btn>-->
-    <!--        </v-card-actions>-->
-    <!--      </v-card>-->
     <v-footer> {{ userDetails }} </v-footer>
   </v-container>
 </template>
@@ -261,8 +170,8 @@ import EB5Visa from '~/components/Eb5.vue'
 import O1Visa from '~/components/o1.vue'
 import H1Visa from '~/components/H1B.vue'
 import F1Visa from '~/components/F1.vue'
-import Eb2VisaAd from '~/components/Eb2Ad.vue'
-import Eb2VisaEa from '~/components/Eb2Ea.vue'
+import Eb2VisaAd from '~/components/Eb2AdvancedDegree.vue'
+import Eb2VisaEa from '~/components/Eb2ExceptionalAbility.vue'
 import Eb2VisaNiw from '~/components/Eb2Niw.vue'
 import EB3VisaUnskilled from '~/components/Eb3Unskilled.vue'
 import EB3VisaProfessional from '~/components/Eb3Professional.vue'

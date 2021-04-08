@@ -20,21 +20,7 @@ export default class EB2Ea extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .withBasicInformation('Kivételes képesség:')
-    .withBasicInformation('- tudományokban')
-    .withBasicInformation('- művészetekben')
-    .withBasicInformation('- üzleti életben')
-    .withBasicInformation(
-      'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" '
-    )
-    .withBasicInformation('Munkaajánlat szükséges USA cégtől')
-    .withBasicInformation(
-      'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:'
-    )
-    .withLink(
-      'uscis',
-      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2'
-    )
+    .withBasicInformation('Munkaajánlat szükséges egy amerikai cégtől')
     .withExpandableInformation(
       'Minimum 3 kritérium teljesítése a felsorolt 7-ből "*Criteria" fejezetben:',
       [
@@ -46,6 +32,10 @@ export default class EB2Ea extends Vue {
         'Szakmai társaságok, kormányzati szervek, szakmai vagy üzleti szervezetek elismerik elért eredményeit és az iparához vagy szakterületéhez való jelentős hozzájárulást',
         'A jogosultság egyéb összehasonlítható bizonyítéka is elfogadható.',
       ]
+    )
+    .withLink(
+      'uscis',
+      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2'
     )
 
   get enabled() {
