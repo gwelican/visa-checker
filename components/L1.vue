@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">L-1</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
@@ -24,12 +24,17 @@ export default class L1Visa extends Vue {
 
   visaInformation = new VisaInformation()
     .withBasicInformation(
-      'Az elmúlt 3 évben dolgoztál, olyan cégnek, legalább 1'
+      'Egyesült Államokba való beutazási kérelmét megelőző három évből legalább folyamatosan egy évig kellett hogy a nemzetközi cég alkalmazásában álljon az Egyesül Államokon kívül'
     )
-    .withBasicInformation('évig megszakítás nélkül, melynek van USA területén')
-    .withBasicInformation('irodája')
-    .withBasicInformation(
-      'Ismét ezen céghez mész dolgozni, de már az amerikai irodához'
-    )
+    .withExpandableInformation('L1A', [
+      'Vezető vagy manager pozícióban dolgozik az áthelyező cég Amerikai irodájának',
+    ])
+    .withExpandableInformation('L1B', [
+      'Szaktudását használva dolgozik az áthelyező cég Amerikai irodájának',
+    ])
+
+  get enabled() {
+    return !this.userDetails.selfPetition ? 'colorActive' : 'colorInactive'
+  }
 }
 </script>

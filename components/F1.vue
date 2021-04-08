@@ -1,5 +1,5 @@
 <template>
-  <v-card height="100%">
+  <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">F1</v-card-title>
     <v-card-text>
       <requirements :visa-information="visaInformation" />
@@ -20,5 +20,9 @@ export default class F1Visa extends Vue {
   private visaInformation = new VisaInformation()
     .withBasicInformation('Felvétel elnyerése amerikai egyetemre esetben')
     .withBasicInformation('Tanulmányok idejére érvényes')
+
+  get enabled() {
+    return !this.userDetails.selfPetition ? 'colorActive' : 'colorInactive'
+  }
 }
 </script>

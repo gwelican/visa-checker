@@ -18,24 +18,8 @@ export default class EB2Niw extends Vue {
   userDetails!: UserDetails
 
   private visaInformation = new VisaInformation()
-    .withBasicInformation('Minimum MSc VAGY PhD végzettség')
     .withBasicInformation(
-      '5 év munkatapasztalat végzettségnek megfelelő területen'
-    )
-    .withBasicInformation('VAGY')
-    .withBasicInformation('Kivételes képesség:')
-    .withBasicInformation('- tudományokban')
-    .withBasicInformation('- művészetekben')
-    .withBasicInformation('- üzleti életben')
-    .withBasicInformation(
-      'Kivételes képesség: "jelentősen meghaladja az adott területen tapasztalható szintet" '
-    )
-    .withBasicInformation(
-      'Az összes kritérium teljesítése a "*Criteria for National Interest Waiver" fejezetben:'
-    )
-    .withBasicInformation('PLUSZ')
-    .withBasicInformation(
-      'Bizonyítékok arra vonatkozólag, hogy állami érdek a jelölt beengedése még munkaajánlat nélkül is'
+      'Eb2: Magas végzettség vagy Eb2: Kivételes képzettségnek meg kell felelni'
     )
     .withExpandableInformation(
       'Az összes kritérium teljesítése a "*Criteria for National Interest Waiver" fejezetben:',
@@ -44,6 +28,10 @@ export default class EB2Niw extends Vue {
         'A jelölt megfelelő helyzetben van ahhoz, hogy az országos érdekeket előre mozdítsa',
         'Az Egyesült Államok számára előnyös lenne, ha konkrét állásajánlat nélkül engedné a letepeledést a jelöltnek',
       ]
+    )
+    .withLink(
+      'USCIS',
+      'https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2'
     )
 
   get enabled() {
