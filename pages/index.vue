@@ -134,10 +134,10 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <eb3-visa-skilled :user-details="userDetails" />
+        <eb3-visa-professional :user-details="userDetails" />
       </v-col>
       <v-col cols="3">
-        <eb3-visa-professional :user-details="userDetails" />
+        <eb3-visa-skilled :user-details="userDetails" />
       </v-col>
       <v-col cols="3">
         <eb3-visa-unskilled :user-details="userDetails" />
@@ -145,19 +145,18 @@
     </v-row>
     <v-row>
       <v-col>
-        <h1b-visa :user-details="userDetails" />
-      </v-col>
-      <v-col>
         <f1-visa :user-details="userDetails" />
       </v-col>
       <v-col>
         <j1-visa :user-details="userDetails" />
       </v-col>
       <v-col>
+        <h1b-visa :user-details="userDetails" />
+      </v-col>
+      <v-col>
         <l1-visa :user-details="userDetails" />
       </v-col>
     </v-row>
-    <v-footer> {{ userDetails }} </v-footer>
   </v-container>
 </template>
 

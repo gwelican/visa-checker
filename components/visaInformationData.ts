@@ -1,19 +1,34 @@
 interface StringToStringArrayMap {
   [key: string]: string[]
 }
+
 class Link {
   href: string
   text: string
+
   constructor(text: string, href: string) {
     this.text = text
     this.href = href
   }
 }
-export class VisaInformation {
+
+export enum VisaType {
+  IMMIGRANT,
+  NON_IMMIGRANT,
+  DUAL_INTENT,
+}
+
+export class VisaInformationData {
+  private _visaType!: VisaType
   private _basicRequirements: string[] = []
+  private _basicInformation: string[] = []
   private _groupedRequirements: StringToStringArrayMap = {}
   private _links: Link[] = []
-  private _additionalInformation: string[] = []
+
+  withVisaType(type: VisaType) {
+    this._visaType = type
+    return this
+  }
 
   withLink(text: string, href: string) {
     this._links.push(new Link(text, href))
@@ -21,6 +36,11 @@ export class VisaInformation {
   }
 
   withBasicInformation(text: string) {
+    this._basicInformation.push(text)
+    return this
+  }
+
+  withBasicRequirement(text: string) {
     this._basicRequirements.push(text)
     return this
   }
@@ -46,12 +66,11 @@ export class VisaInformation {
     return this._links
   }
 
-  withAdditionalInformation(text: string) {
-    this._additionalInformation.push(text)
-    return this
+  get basicInformation() {
+    return this._basicInformation
   }
 
-  get additionalInformation() {
-    return this._additionalInformation
+  get visaType() {
+    return this._visaType
   }
 }
