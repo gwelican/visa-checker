@@ -2,7 +2,11 @@
   <v-card :color="enabled" height="100%">
     <v-card-title class="justify-center">O1 Kivételes képességek</v-card-title>
     <v-card-text>
-      <requirements :visa-information="visaInformation" />
+      <VisaInformation
+        :visa-information="visaInformation"
+        :greencard="true"
+        eligible-for-work="true"
+      />
       <VisaOpportunities :greencard="true" eligible-for-work="true" />
     </v-card-text>
   </v-card>
@@ -10,17 +14,21 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { UserDetails } from '~/pages/index.vue'
-import { VisaInformation } from '~/components/visainformation'
+import { VisaInformationData, VisaType } from '~/components/visaInformationData'
 
 @Component
 export default class O1Visa extends Vue {
   @Prop()
   userDetails!: UserDetails
 
-  private visaInformation = new VisaInformation()
+  private visaInformation = new VisaInformationData()
 
+    .withVisaType(VisaType.DUAL_INTENT)
     .withBasicInformation(
-      'Nem bevándorló vizum, maximum 3 évnyi tartózkodásra, eb1re váltható'
+      'Az O vízumot olyan személyek kaphatják, akik kiemelkedő képességekkel rendelkeznek a tudományok, művészetek, az oktatás, az üzleti élet vagy a sport területén, vagy kiemelkedő eredményeket értek el a filmgyártás és televíziós műsorkészítés terén, illetve ilyen vízumot kaphatnak a fenti személyek nélkülözhetetlen támogató személyzetének tagjai.'
+    )
+    .withBasicInformation(
+      'Nem bevándorló vizum, maximum 3 évnyi tartózkodásra, EB1re váltható'
     )
     .withExpandableInformation(
       'Kimagasló, nemzetközileg elismert díjat vagy legalább három dokumentumot az alábbiak közül',
@@ -37,12 +45,12 @@ export default class O1Visa extends Vue {
       ]
     )
     .withLink(
-      'Info',
-      'https://immigrationvisausa.com/hu/munkavallalasi-vizumok#O-1vizumHung'
-    )
-    .withLink(
       'USCIS',
       'https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement'
+    )
+    .withLink(
+      'immigrationvisaUSA',
+      'https://immigrationvisausa.com/hu/munkavallalasi-vizumok#O-1vizumHung'
     )
 
   get enabled() {
