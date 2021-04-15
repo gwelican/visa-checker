@@ -133,13 +133,13 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="3">
+      <v-col>
         <eb3-visa-professional :user-details="userDetails" />
       </v-col>
-      <v-col cols="3">
+      <v-col>
         <eb3-visa-skilled :user-details="userDetails" />
       </v-col>
-      <v-col cols="3">
+      <v-col>
         <eb3-visa-unskilled :user-details="userDetails" />
       </v-col>
     </v-row>
