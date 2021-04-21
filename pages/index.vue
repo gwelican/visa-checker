@@ -219,6 +219,12 @@
         <l1-visa :user-details="userDetails"/>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="3">
+
+      <k1-visa :user-details="userDetails"></k1-visa>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -240,6 +246,7 @@ import EB3VisaSkilled from '~/components/Eb3Skilled.vue'
 import EB1VisaOutstanding from '~/components/Eb1Outstanding.vue'
 import EB1VisaManager from '~/components/Eb1Manager.vue'
 import EB1VisaExtraOrdinary from '~/components/Eb1ExtraordinaryAbility.vue'
+import K1Visa from "~/components/K1.vue";
 
 export class UserDetails {
   age = 18
@@ -266,6 +273,7 @@ export class UserDetails {
     Eb3VisaProfessional: EB3VisaProfessional,
     Eb3VisaSkilled: EB3VisaSkilled,
     Eb5Visa: EB5Visa,
+    K1Visa: K1Visa,
     Marriage,
     L1Visa,
     J1Visa,
