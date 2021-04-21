@@ -1,9 +1,71 @@
 <template>
   <v-container>
+    <v-row justify="center">
+
+
+      <v-dialog v-model="dialog" max-width="50%">
+        <v-card class="headline">
+          <v-card-title>Információ</v-card-title>
+          <v-card-text>Ez a honlap <b>nem</b>:
+            <v-list class="text-center">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="red">mdi-close</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>ügyvédek által lett készítve</v-list-item-content>
+              </v-list-item>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="red">mdi-close</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>ad jogi tanácsot, vagy jogi képviseletet</v-list-item-content>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="red">mdi-close</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>garantálja, hogy a vízumot/zöldkártyát megkapod</v-list-item-content>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="red">mdi-close</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>egy ember, nem speciális esetet vesz figyelembe, hanem nagyvonalakban próbálja meghatározni,
+                  milyen vízumokra van esély</v-list-item-content>
+              </v-list-item>
+            </v-list>
+
+            Ez a honlap:
+            <v-list class="text-center">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="green">mdi-check</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>megpróbál pár kérdés megválaszolása után tippet adni, hogy merre érdemes tovább indulni</v-list-item-content>
+              </v-list-item>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon color="green">mdi-check</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>jó információ forrás: összegyűjtött linkekkel es leírásokkal</v-list-item-content>
+              </v-list-item>
+
+            </v-list>
+
+            <v-row justify="center">
+
+            <v-btn @click="dialog = false; setConsent()">Megértettem</v-btn>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-row>
     <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="9">
         <v-card flat>
-          <v-card-title> Személyes adatok </v-card-title>
+          <v-card-title> Személyes adatok</v-card-title>
           <v-card-text>
             <v-row justify="space-between">
               <v-col lg="3">
@@ -19,7 +81,7 @@
                 ></v-checkbox>
               </v-col>
               <v-col lg="3">
-                <v-checkbox v-model="userDetails.msc" label="Van msc/phd" />
+                <v-checkbox v-model="userDetails.msc" label="Van msc/phd"/>
               </v-col>
               <v-col lg="3">
                 <v-checkbox
@@ -105,63 +167,63 @@
     </v-row>
     <v-row>
       <v-col>
-        <o1-visa :user-details="userDetails" />
+        <o1-visa :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <eb1-visa-extra-ordinary :user-details="userDetails" />
+        <eb1-visa-extra-ordinary :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <eb1-visa-manager :user-details="userDetails" />
+        <eb1-visa-manager :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <eb1-visa-outstanding :user-details="userDetails" />
+        <eb1-visa-outstanding :user-details="userDetails"/>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <eb5-visa :user-details="userDetails" />
+        <eb5-visa :user-details="userDetails"/>
       </v-col>
 
       <v-col>
-        <eb2-visa-ea :user-details="userDetails" />
+        <eb2-visa-ea :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <eb2-visa-ad :user-details="userDetails" />
+        <eb2-visa-ad :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <eb2-visa-niw :user-details="userDetails" />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <eb3-visa-professional :user-details="userDetails" />
-      </v-col>
-      <v-col>
-        <eb3-visa-skilled :user-details="userDetails" />
-      </v-col>
-      <v-col>
-        <eb3-visa-unskilled :user-details="userDetails" />
+        <eb2-visa-niw :user-details="userDetails"/>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <f1-visa :user-details="userDetails" />
+        <eb3-visa-professional :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <j1-visa :user-details="userDetails" />
+        <eb3-visa-skilled :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <h1b-visa :user-details="userDetails" />
+        <eb3-visa-unskilled :user-details="userDetails"/>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <f1-visa :user-details="userDetails"/>
       </v-col>
       <v-col>
-        <l1-visa :user-details="userDetails" />
+        <j1-visa :user-details="userDetails"/>
+      </v-col>
+      <v-col>
+        <h1b-visa :user-details="userDetails"/>
+      </v-col>
+      <v-col>
+        <l1-visa :user-details="userDetails"/>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import {Component, Vue} from 'nuxt-property-decorator'
 import J1Visa from '~/components/J1.vue'
 import L1Visa from '~/components/L1.vue'
 import Marriage from '~/components/marriage.vue'
@@ -214,6 +276,15 @@ export class UserDetails {
 })
 export default class Index extends Vue {
   userDetails: UserDetails = new UserDetails()
+  private dialog = true;
+  mounted() {
+
+    let consent = this.$cookies.get('consent');
+    this.dialog = consent !== 'seen'
+  }
+  private setConsent() {
+    this.$cookies.set('consent', 'seen')
+  }
 }
 </script>
 
