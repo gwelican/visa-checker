@@ -13,13 +13,15 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <nuxt/>
+        <nuxt />
       </v-container>
     </v-main>
     <v-footer :absolute="!fixed" app>
       <v-row dense>
         <v-col cols="1">
-          <div class="tw-justify-self-start">{{ new Date().getFullYear() }}</div>
+          <div class="tw-justify-self-start">
+            {{ new Date().getFullYear() }}
+          </div>
         </v-col>
         <v-col cols="2">
           <v-row dense>
@@ -49,7 +51,6 @@ export default {
           title: 'Vizum',
           to: '/',
         },
-
       ],
       miniVariant: false,
       right: true,
