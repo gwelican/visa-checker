@@ -23,7 +23,7 @@
             {{ new Date().getFullYear() }}
           </div>
         </v-col>
-        <v-col cols="2">
+        <v-col lg="2">
           <v-row dense>
             <v-col>
               <div class="tw-justify-self-end">&copy; Zsolt Domozi</div>

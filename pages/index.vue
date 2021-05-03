@@ -219,7 +219,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="3">
+      <v-col lg="3">
         <k1-visa :user-details="userDetails"></k1-visa>
       </v-col>
     </v-row>
