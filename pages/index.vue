@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container :class="{ 'tw-filter tw-blur-sm': dialog }">
     <v-row justify="center">
-      <v-dialog v-model="dialog" max-width="50%">
+      <v-dialog v-model="dialog" max-width="50%" persistent>
         <v-card class="headline">
           <v-card-title>Információ</v-card-title>
           <v-card-text
@@ -132,17 +132,6 @@
                     v-model="userDetails.extraordinaryAbility"
                     label="Rendkívüli képesség/eredmény"
                   />
-                  <v-tooltip top close-delay="2000">
-                    <template #activator="{ on, attrs }">
-                      <v-btn icon v-bind="attrs" v-on="on">
-                        <v-icon dense>mdi-help-circle</v-icon>
-                      </v-btn>
-                    </template>
-                    <span>
-                      Kivételes képesség: - tudományokban - művészetekben -
-                      üzleti életben - oktatásban - sportban
-                    </span>
-                  </v-tooltip>
                 </v-row>
               </v-col>
               <v-col lg="3">
@@ -153,16 +142,7 @@
                       label="Kutató/professzor"
                     />
                   </v-col>
-                  <v-col>
-                    <v-tooltip top>
-                      <template #activator="{ on, attrs }">
-                        <v-btn icon v-bind="attrs" v-on="on">
-                          <v-icon dense>mdi-help-circle</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>This is a tooltip</span>
-                    </v-tooltip>
-                  </v-col>
+                  <v-col> </v-col>
                 </v-row>
               </v-col>
             </v-row>

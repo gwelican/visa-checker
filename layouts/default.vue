@@ -48,7 +48,7 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Vizum',
+          title: 'Vízum/zöldkártya',
           to: '/',
         },
       ],
