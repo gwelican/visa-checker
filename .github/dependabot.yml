@@ -5,7 +5,8 @@ updates:
   directory: '/'
   schedule:
     interval: weekly
-    time: '00:00'
+    time: '03:00'
+    timeZone: "America/Los_Angeles"
   open-pull-requests-limit: 10
   reviewers:
     - gwelican
@@ -20,7 +21,8 @@ updates:
   directory: '/'
   schedule:
     interval: daily
-    time: '00:00'
+    time: '03:00'
+    timeZone: "America/Los_Angeles"
   open-pull-requests-limit: 10
   reviewers:
     - gwelican
