@@ -6,7 +6,7 @@ updates:
   schedule:
     interval: weekly
     time: '03:00'
-    timeZone: "America/Los_Angeles"
+    timezone: "America/Los_Angeles"
   open-pull-requests-limit: 10
   reviewers:
     - gwelican
@@ -22,8 +22,8 @@ updates:
   schedule:
     interval: daily
     time: '03:00'
-    timeZone: "America/Los_Angeles"
-  open-pull-requests-limit: 10
+    timezone: "America/Los_Angeles"
+    open-pull-requests-limit: 10
   reviewers:
     - gwelican
   assignees:
