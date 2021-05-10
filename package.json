@@ -40,7 +40,7 @@
     "postcss": "^7",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "ts-jest": "^26.5.5",
+    "ts-jest": "^26.5.6",
     "vue-jest": "^3.0.4"
   }
 }
