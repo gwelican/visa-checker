@@ -17,7 +17,7 @@
     "core-js": "^3.19.1",
     "nuxt": "^2.15.8",
     "nuxt-property-decorator": "^2.9.1",
-    "cookie-universal-nuxt": "^2.1.5"
+    "cookie-universal-nuxt": "^2.2.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
